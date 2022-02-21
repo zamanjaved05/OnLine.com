@@ -61,8 +61,17 @@
                     <td>
                         <div class="row">
                             <div class=" hidden-xs">
-                                <img src="/image/{{ $item->attributes->image }}"
-                                     style="width:120px"   alt="..." class="img-responsive"/>
+                                @if (File::exists(public_path("/image/products/".$item->attributes->image)))
+                                    <img src="{{ ('/image/products/'.$item->attributes->image) }}" style="width:120px" class="img-responsive" />
+
+                                @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
+                                    <img src="{{ ('/image/cosmetic/'.$item->attributes->image) }}" style="width:120px" class="img-responsive"  />
+
+                                @else
+                                    <img src="{{ ('/image/bags/'.$item->attributes->image) }}" style="width:120px" class="img-responsive" />
+
+                                @endif
+
                             </div>
 
                         </div>

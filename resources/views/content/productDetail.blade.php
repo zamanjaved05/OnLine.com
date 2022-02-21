@@ -26,6 +26,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="product-details-img">
                                 <div class="product-thumb">
+{{--
                                     <div id="gallery" class="product-dec-slider-2 product-tab-left">
                                         <a data-image="/image/products/{{$detail->image}}" data-zoom-image="/image/products/{{$detail->image}}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
                                             <img class="blur-up lazyload" src="/image/products/{{$detail->image}}" alt="" />
@@ -49,11 +50,22 @@
                                             <img class="blur-up lazyload" src="/image/products/{{$detail->image}}/image/products/{{$detail->image}}" alt="" />
                                         </a>
                                     </div>
+--}}
                                 </div>
                                 <div class="zoompro-wrap product-zoom-right pl-20">
                                     <div class="zoompro-span">
+                                        @if (File::exists(public_path("image/products/".$detail->image)))                                            <img class="zoompro blur-up lazyload" data-zoom-image="/image/products/{{$detail->image}}"
                                         <img class="zoompro blur-up lazyload" data-zoom-image="/image/products/{{$detail->image}}"
-                                             alt="" src="/image/products/{{$detail->image}}" />
+                                             alt="" src="/image/products/{{$detail->image}}"/>
+
+                                        @elseif(File::exists(public_path("image/cosmetic/".$cosmetic->image)))
+                                            <img class="zoompro blur-up lazyload" data-zoom-image="/image/cosmetic/{{$cosmetic->image}}"
+                                                 alt="" src="/image/cosmetic/{{$cosmetic->image}}"/>
+                                        @else
+                                            <img class="zoompro blur-up lazyload" data-zoom-image="/image/bags/{{$bag->image}}"
+                                                 alt="" src="/image/bags/{{$bag->image}}"/>
+                                            @endif
+
                                     </div>
                                     <div class="product-labels"><span class="lbl on-sale">Sale</span><span class="lbl pr-label1">new</span></div>
                                     <div class="product-buttons">
@@ -61,15 +73,15 @@
                                         <a href="#" class="btn prlightbox" title="Zoom"><i class="icon anm anm-expand-l-arrows" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
-                                <div class="lightboximages">
-                                    <a href="assets/images/product-detail-page/cape-dress-1.jpg" data-size="1462x2048"></a>
-                                    <a href="assets/images/product-detail-page/cape-dress-2.jpg" data-size="1462x2048"></a>
-                                    <a href="assets/images/product-detail-page/cape-dress-3.jpg" data-size="1462x2048"></a>
-                                    <a href="assets/images/product-detail-page/cape-dress-4.jpg" data-size="1462x2048"></a>
-                                    <a href="assets/images/product-detail-page/cape-dress-5.jpg" data-size="1462x2048"></a>
-                                    <a href="assets/images/product-detail-page/cape-dress-6.jpg" data-size="1462x2048"></a>
-                                    <a href="assets/images/product-detail-page/cape-dress-7.jpg" data-size="731x1024"></a>
-                                </div>
+                           {{--     <div class="lightboximages">
+                                    <a href="/image/products/{{$detail->image}}-1.jpg" data-size="1462x2048"></a>
+                                    <a href="/image/products/{{$detail->image}}-2.jpg" data-size="1462x2048"></a>
+                                    <a href="/image/products/{{$detail->image}}-3.jpg" data-size="1462x2048"></a>
+                                    <a href="/image/products/{{$detail->image}}-4.jpg" data-size="1462x2048"></a>
+                                    <a href="/image/products/{{$detail->image}}-5.jpg" data-size="1462x2048"></a>
+                                    <a href="/image/products/{{$detail->image}}-6.jpg" data-size="1462x2048"></a>
+                                    <a href="/image/products/{{$detail->image}}-7.jpg" data-size="731x1024"></a>
+                                </div>--}}
 
                             </div>
                         </div>

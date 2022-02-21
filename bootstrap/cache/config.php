@@ -191,7 +191,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\framework/cache/data',
+        'path' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -362,12 +362,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\app',
+        'root' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\app/public',
+        'root' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -385,7 +385,7 @@
     ),
     'links' => 
     array (
-      'E:\\xampp8.1.2\\htdocs\\doubleAuth\\public\\storage' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\app/public',
+      'E:\\xampp8.1.2\\htdocs\\OnLine.com\\public\\storage' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\app/public',
     ),
   ),
   'fortify-options' => 
@@ -479,13 +479,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\logs/laravel.log',
+        'path' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\logs/laravel.log',
+        'path' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -537,7 +537,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\logs/laravel.log',
+        'path' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -602,7 +602,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\resources\\views/vendor/mail',
+        0 => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -711,7 +711,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\framework/sessions',
+    'files' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -740,14 +740,14 @@
   array (
     'paths' => 
     array (
-      0 => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\resources\\views',
+      0 => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\resources\\views',
     ),
-    'compiled' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\storage\\framework\\views',
+    'compiled' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\storage\\framework\\views',
   ),
   'livewire' => 
   array (
     'class_namespace' => 'App\\Http\\Livewire',
-    'view_path' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth\\resources\\views/livewire',
+    'view_path' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\resources\\views/livewire',
     'layout' => 'layouts.app',
     'asset_url' => NULL,
     'app_url' => NULL,
@@ -854,7 +854,7 @@
     array (
     ),
     'enable_runnable_solutions' => true,
-    'remote_sites_path' => 'E:\\xampp8.1.2\\htdocs\\doubleAuth',
+    'remote_sites_path' => 'E:\\xampp8.1.2\\htdocs\\OnLine.com',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
   ),

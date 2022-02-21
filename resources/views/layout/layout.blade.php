@@ -443,16 +443,25 @@
                     <div class="site-cart">
                         <a href="#;" class="site-header__cart" title="Cart">
                             <i class="icon anm anm-bag-l"></i>
-                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">{{ Cart::getTotalQuantity()}}</span>
                         </a>
                         <!--Minicart Popup-->
                         <div id="header-cart" class="block block-cart">
                             <ul class="mini-products-list">
-                                @foreach ($cartItems as $item)
+                                @foreach ($cartItems->take(5) as $item)
                                 <li class="item">
                                     <a class="product-image" href="#">
-                                        <img src="/image/{{ $item->attributes->image }}"
-                                             alt="3/4 Sleeve Kimono Dress" title=""/>
+                                        @if (File::exists(public_path("/image/products/".$item->attributes->image)))
+                                            <img src="{{ ('/image/products/'.$item->attributes->image) }}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+
+                                        @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
+                                            <img src="{{ ('/image/cosmetic/'.$item->attributes->image) }}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+
+                                        @else
+                                            <img src="{{ ('/image/bags/'.$item->attributes->image) }}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+
+                                        @endif
+
                                     </a>
                                     <div class="product-details">
                                         <a href="#" class="remove">
@@ -859,7 +868,7 @@
                             <!-- End model close -->
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <div class="product-details-img">
+                                    <div class="product-details-imgbag">
                                         <div class="pl-20">
                                             <img src="assets/images/product-detail-page/camelia-reversible-big1.jpg"
                                                  alt=""/>

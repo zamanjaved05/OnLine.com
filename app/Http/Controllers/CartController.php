@@ -20,9 +20,9 @@ class CartController extends Controller
     }
     public function productList()
     {
+        $cartItems = \Cart::getContent();
         $cosmetics=Cosmetic::all();
         $bags=Bag::all();
-        $cartItems = \Cart::getContent();
         $products = Product::all();
         $products1 = Product1::all();
         return view('content.products', compact('products',
@@ -91,8 +91,10 @@ class CartController extends Controller
     {
         $cartItems = \Cart::getContent();
         $detail=Product::find($id);
+        $cosmetic=Cosmetic::find($id);
         $bag=Product::find($id);
-        return view('content.productDetail',compact('detail','cartItems','bag'));
+        return view('content.productDetail',compact('detail','cosmetic',
+            'cartItems','bag'));
 
 
     }

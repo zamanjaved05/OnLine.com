@@ -1216,23 +1216,27 @@
                 --}}
                 @foreach($cosmetics as $cosmetic)
                     <div class="collection-grid-item ">
-                        <a href="{{url("productDetail/$product->id") }}" class="collection-grid-item__link m-1">
+                        <a href="{{url("productDetail/$cosmetic->id") }}" class="collection-grid-item__link m-1">
                             <img class="blur-up lazyload" data-src="/image/cosmetic/{{$cosmetic->image}}"
                                  src="/image/cosmetic/{{$cosmetic->image}}" alt="Cosmetic"/>
                             <div class="collection-grid-item__title-wrapper">
+
                                 <form class="add-to-cart" action="{{ route('cart.store') }}" method="POST"
                                       enctype="multipart/form-data">
                                     @csrf
-                                    <input type="hidden" value="{{ $product->id }}" name="id">
-                                    <input type="hidden" value="{{ $product->name }}" name="name">
-                                    <input type="hidden" value="{{ $product->price }}" name="price">
-                                    <input type="hidden" value="{{ $product->image }}" name="image">
+                                    <input type="hidden" value="{{ $cosmetic->id }}" name="id">
+                                    <input type="hidden" value="{{ $cosmetic->name }}" name="name">
+                                    <input type="hidden" value="{{ $cosmetic->price }}" name="price">
+                                    <input type="hidden" value="{{ $cosmetic->image }}" name="image">
                                     <input type="hidden" value="1" name="quantity">
-                                    <button class="add-to-cart"><h3
-                                            class="collection-grid-item__title btn btn--secondary no-border">Add to
-                                            Cart</h3>
+                                    <button class="add-to-cart" type="submit"><h3
+                                            class="collection-grid-item__title btn btn--secondary no-border">
+                                            <i class="icon anm anm-bag-l p-1" style="float: left;"></i></h3>
                                     </button>
                                 </form>
+                                <p style="font-size: 20px">${{$cosmetic->price}}</p>
+
+
                             </div>
                         </a>
                     </div>
@@ -1328,7 +1332,7 @@
                         <div class="col-6 col-sm-6 col-md-3 col-lg-3 item grid-view-item style2">
                             <div class="grid-view_image" style="width: 70%">
                                 <!-- start product image -->
-                                <a href="product-accordion.html" class="grid-view-item__link">
+                                <a href="{{url("productDetail/$bag->id") }}" class="grid-view-item__link">
                                     <!-- image -->
                                     <img class="grid-view-item__image primary blur-up lazyload"
                                          data-src="/image/bags/{{$bag->image}}"
@@ -1351,7 +1355,7 @@
                                 <div class="product-details hoverDetails text-center mobile">
                                     <!-- product name -->
                                     <div class="product-name">
-                                        <a href="product-accordion.html">{{$bag->name}}</a>
+                                        <a href="{{url("productDetail/$bag->id") }}">{{$bag->name}}</a>
                                     </div>
                                     <!-- End product name -->
                                     <!-- product price -->
@@ -1369,11 +1373,21 @@
                                             <i class="icon anm anm-search-plus-r"></i>
                                         </a>
                                         <!-- Start product button -->
-                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"
-                                              method="post">
-                                            <button class="btn cartIcon btn-addto-cart" type="button" tabindex="0"><i
-                                                    class="icon anm anm-bag-l"></i></button>
-                                        </form>
+{{--                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"--}}
+{{--                                              method="post">--}}
+                                            <form class="add-to-cart" action="{{ route('cart.store') }}" method="POST"
+                                                  enctype="multipart/form-data">
+                                                @csrf
+                                                <input type="hidden" value="{{ $bag->id }}" name="id">
+                                                <input type="hidden" value="{{ $bag->name }}" name="name">
+                                                <input type="hidden" value="{{ $bag->price }}" name="price">
+                                                <input type="hidden" value="{{ $bag->image }}" name="image">
+                                                <input type="hidden" value="1" name="quantity">
+                                                <button class="btn cartIcon btn-addto-cart" type="submit" tabindex="0">
+                                                     <i class="icon anm anm-bag-l"></i> </button>
+                                            </form>
+
+
                                         <div class="wishlist-btn">
                                             <a class="wishlist add-to-wishlist" href="wishlist.html">
                                                 <i class="icon anm anm-heart-l"></i>
@@ -1396,7 +1410,7 @@
                                             src="/image/bags/{{$bag->image}}" alt="image"/></li>
                                     <li class="swatch medium rounded"><img
                                             src="/image/bags/{{$bag->image}}" alt="image"/></li>
-                                    {{--    <li class="swatch medium rounded"><img
+                                     {{--   <li class="swatch medium rounded"><img
                                                 src="/image/bags/{{$bag->image}}" alt="image"/></li>
                                         <li class="swatch medium rounded"><img
                                                 src="/image/bags/{{$bag->image}}" alt="image"/></li>
