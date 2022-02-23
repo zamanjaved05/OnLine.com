@@ -2,20 +2,20 @@
 // Pages: E-commerce
 //
 
-// product image
+// product images
 .product-image {
   @include img-fluid ();
   width: 100%;
 }
 
-// product image thumbnails list
+// product images thumbnails list
 .product-image-thumbs {
   align-items: stretch;
   display: flex;
   margin-top: 2rem;
 }
 
-// product image thumbnail
+// product images thumbnail
 .product-image-thumb {
   @include box-shadow($thumbnail-box-shadow);
   @include border-radius($thumbnail-border-radius);

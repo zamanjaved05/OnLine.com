@@ -1,5 +1,5 @@
 /*!
- * 
+ *
  * Super simple WYSIWYG editor v0.8.20
  * https://summernote.org
  *
@@ -51,7 +51,7 @@ var __webpack_exports__ = {};
         shapeThumbnail: 'Forma: miniatiūra',
         shapeNone: 'Forma: jokia',
         dragImageHere: 'Vilkite paveikslėlį čia',
-        dropImage: 'Drop image or Text',
+        dropImage: 'Drop images or Text',
         selectFromFiles: 'Pasirinkite failą',
         maximumFileSize: 'Maskimalus failo dydis',
         maximumFileSizeError: 'Maskimalus failo dydis viršytas!',

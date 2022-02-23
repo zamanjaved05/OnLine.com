@@ -1,5 +1,5 @@
 /*!
- * 
+ *
  * Super simple WYSIWYG editor v0.8.20
  * https://summernote.org
  *
@@ -51,7 +51,7 @@ var __webpack_exports__ = {};
         shapeThumbnail: 'Shape: Thumbnail',
         shapeNone: 'Shape: None',
         dragImageHere: 'یک تصویر را اینجا بکشید',
-        dropImage: 'Drop image or Text',
+        dropImage: 'Drop images or Text',
         selectFromFiles: 'فایل ها را انتخاب کنید',
         maximumFileSize: 'حداکثر اندازه پرونده',
         maximumFileSizeError: 'Maximum file size exceeded.',

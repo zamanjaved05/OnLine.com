@@ -1761,7 +1761,7 @@
                 width = legendOptions.marginLeft;
             }
 
-            // Draw legend elements (circle, square or image in vertical or horizontal mode)
+            // Draw legend elements (circle, square or images in vertical or horizontal mode)
             for (i = 0; i < sliceOptions.length; ++i) {
                 var legendElem = {};
                 var legendElemBBox = {};

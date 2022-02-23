@@ -6688,7 +6688,7 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -6701,14 +6701,14 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	!function() {
@@ -6721,7 +6721,7 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /******/ 			}
 /******/ 		};
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/global */
 /******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
@@ -6733,12 +6733,12 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /******/ 			}
 /******/ 		})();
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	!function() {
 /******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
 /******/ 	}();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
@@ -6749,7 +6749,7 @@ $({ global: true, forced: !USE_NATIVE_URL, sham: !DESCRIPTORS }, {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	}();
-/******/ 	
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
@@ -7096,7 +7096,7 @@ var defaultOptions = {
   paramName: "file",
 
   /**
-   * Whether thumbnails for images should be generated
+   * Whether thumbnails for image should be generated
    */
   createImageThumbnails: true,
 
@@ -7111,18 +7111,18 @@ var defaultOptions = {
   thumbnailWidth: 120,
 
   /**
-   * The same as `thumbnailWidth`. If both are null, images will not be resized.
+   * The same as `thumbnailWidth`. If both are null, image will not be resized.
    */
   thumbnailHeight: 120,
 
   /**
-   * How the images should be scaled down in case both, `thumbnailWidth` and `thumbnailHeight` are provided.
+   * How the image should be scaled down in case both, `thumbnailWidth` and `thumbnailHeight` are provided.
    * Can be either `contain` or `crop`.
    */
   thumbnailMethod: "crop",
 
   /**
-   * If set, images will be resized to these dimensions before being **uploaded**.
+   * If set, image will be resized to these dimensions before being **uploaded**.
    * If only one, `resizeWidth` **or** `resizeHeight` is provided, the original aspect
    * ratio of the file will be preserved.
    *
@@ -7144,12 +7144,12 @@ var defaultOptions = {
   resizeMimeType: null,
 
   /**
-   * The quality of the resized images. See `resizeWidth`.
+   * The quality of the resized image. See `resizeWidth`.
    */
   resizeQuality: 0.8,
 
   /**
-   * How the images should be scaled down in case both, `resizeWidth` and `resizeHeight` are provided.
+   * How the image should be scaled down in case both, `resizeWidth` and `resizeHeight` are provided.
    * Can be either `contain` or `crop`.
    */
   resizeMethod: "contain",
@@ -7493,7 +7493,7 @@ var defaultOptions = {
       width = height * srcRatio;
     } else if (height == null) {
       height = width / srcRatio;
-    } // Make sure images aren't upscaled
+    } // Make sure image aren't upscaled
 
 
     width = Math.min(width, info.srcWidth);
@@ -7533,7 +7533,7 @@ var defaultOptions = {
    * Can be used to transform the file (for example, resize an image if necessary).
    *
    * The default implementation uses `resizeWidth` and `resizeHeight` (if provided) and resizes
-   * images according to those dimensions.
+   * image according to those dimensions.
    *
    * Gets the `file` as the first parameter, and a `done()` function as the second, that needs
    * to be invoked with the file when the transformation is done.
@@ -8861,7 +8861,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
       var fileReader = new FileReader();
 
       fileReader.onload = function () {
-        file.dataURL = fileReader.result; // Don't bother creating a thumbnail for SVG images since they're vector
+        file.dataURL = fileReader.result; // Don't bother creating a thumbnail for SVG image since they're vector
 
         if (file.type === "image/svg+xml") {
           if (callback != null) {
@@ -10104,7 +10104,7 @@ Dropzone.SUCCESS = "success";
 
  */
 // Detecting vertical squash in loaded image.
-// Fixes a bug which squash image vertically while drawing into canvas for some images.
+// Fixes a bug which squash image vertically while drawing into canvas for some image.
 // This is a bug in iOS6 devices. This function from https://github.com/stomita/ios-imagefile-megapixel
 
 var detectVerticalSquash = function detectVerticalSquash(img) {

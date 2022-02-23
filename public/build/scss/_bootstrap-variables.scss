@@ -493,13 +493,13 @@ $custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+
 $custom-select-padding-y:           .375rem !default;
 $custom-select-padding-x:          .75rem !default;
 $custom-select-height:              $input-height !default;
-$custom-select-indicator-padding:   1rem !default; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-indicator-padding:   1rem !default; // Extra padding to account for the presence of the background-images based indicator
 $custom-select-line-height:         $input-btn-line-height !default;
 $custom-select-color:               $input-color !default;
 $custom-select-disabled-color:      $gray-600 !default;
 $custom-select-bg:                  $white !default;
 $custom-select-disabled-bg:         $gray-200 !default;
-$custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
+$custom-select-bg-size:             8px 10px !default; // In pixels because images dimensions
 $custom-select-indicator-color:     $gray-800 !default;
 $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
 $custom-select-background:          escape-svg($custom-select-indicator) right $custom-select-padding-x center / $custom-select-bg-size no-repeat !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)

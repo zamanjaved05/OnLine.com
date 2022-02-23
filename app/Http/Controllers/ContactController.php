@@ -42,16 +42,16 @@ class ContactController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'images' => 'required|images|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $input = $request->all();
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
+        if ($image = $request->file('images')) {
+            $destinationPath = 'images/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
+            $input['images'] = "$profileImage";
         }
 
         Product::create($input);
@@ -98,13 +98,13 @@ class ContactController extends Controller
 
         $input = $request->all();
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
+        if ($image = $request->file('images')) {
+            $destinationPath = 'images/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
+            $input['images'] = "$profileImage";
         }else{
-            unset($input['image']);
+            unset($input['images']);
         }
 
         $product->update($input);

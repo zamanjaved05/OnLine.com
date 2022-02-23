@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::middleware('auth')->group(function (){
+
+});
+
+
+
+
 Route::get('panel', function () {
     return view('admin.adminpanel');
 });
@@ -40,7 +48,7 @@ Route::resource('bags', \App\Http\Controllers\BagController::class);
 
 //allProducts
 Route::get('allProducts', [\App\Http\Controllers\ProductController::class, 'all']);
-Route::get('allCosmatics', [\App\Http\Controllers\CosmeticController::class, 'all']);
+Route::get('allcosmetics', [\App\Http\Controllers\CosmeticController::class, 'all']);
 Route::get('allProducts1', [\App\Http\Controllers\Product1Controller::class, 'all']);
 //
 
@@ -49,10 +57,7 @@ Route::get('allProducts1', [\App\Http\Controllers\Product1Controller::class, 'al
 
 
 //front
-//Route::get('layout/{id}', function ($id) {
-//    $detail = Product::find($id);
-//    return view('layout.layout',compact('detail')->name('layout'));
-//});
+
 
 Route::get('about', function () {
     return view('content.about');
@@ -66,19 +71,23 @@ Route::get('contactUS', function () {
 });
 
 
+//
 
 //cart
-Route::get('layout', [\App\Http\Controllers\CartController::class, 'layout'])->name('layout');
+Route::get('layout/{id}', [\App\Http\Controllers\CartController::class, 'layout'])->name('layout');
 Route::get('/', [\App\Http\Controllers\CartController::class, 'productList'])->name('products.list');
 Route::get('cart', [\App\Http\Controllers\CartController::class, 'cartList'])->name('cart.list');
 Route::post('cart', [\App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');
 Route::post('update-cart', [\App\Http\Controllers\CartController::class, 'updateCart'])->name('cart.update');
 Route::post('remove', [\App\Http\Controllers\CartController::class, 'removeCart'])->name('cart.remove');
 Route::post('clear', [\App\Http\Controllers\CartController::class, 'clearAllCart'])->name('cart.clear');
+//
 Route::get('checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
 Route::post('checkoutstore', [\App\Http\Controllers\CartController::class, 'checkoutstore'])->name('checkoutstore');
 //detailPage
 Route::get('productDetail/{id}', [\App\Http\Controllers\CartController::class, 'productDetail'])->name('productDetail');
+Route::get('cosmetic_detail/{id}', [\App\Http\Controllers\CartController::class, 'cosmetic_detail'])->name('cosmetic_detail');
+Route::get('bag_detail/{id}', [\App\Http\Controllers\CartController::class, 'bag_detail'])->name('bag_detail');
 //Route::get('checkout', [\App\Http\Controllers\CartController::class,'checkout']);
 
 

@@ -3505,22 +3505,22 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         return out;
     };
     /*\
-     * Paper.image
+     * Paper.images
      [ method ]
      **
-     * Embeds an image into the surface.
+     * Embeds an images into the surface.
      **
      > Parameters
      **
-     - src (string) URI of the source image
+     - src (string) URI of the source images
      - x (number) x coordinate position
      - y (number) y coordinate position
-     - width (number) width of the image
-     - height (number) height of the image
-     = (object) Raphaël element object with type “image”
+     - width (number) width of the images
+     - height (number) height of the images
+     = (object) Raphaël element object with type “images”
      **
      > Usage
-     | var c = paper.image("apple.png", 10, 10, 80, 80);
+     | var c = paper.images("apple.png", 10, 10, 80, 80);
     \*/
     paperproto.image = function (src, x, y, w, h) {
         var out = R._engine.image(this, src || "about:blank", x || 0, y || 0, w || 0, h || 0);
@@ -6048,7 +6048,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
                         var isURL = Str(value).match(R._ISURL);
                         if (isURL) {
                             el = $("pattern");
-                            var ig = $("image");
+                            var ig = $("images");
                             el.id = R.createUUID();
                             $(el, {x: 0, y: 0, patternUnits: "userSpaceOnUse", height: 1, width: 1});
                             $(ig, {x: 0, y: 0, "xlink:href": isURL[1]});
@@ -6549,7 +6549,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      o cursor (string) CSS type of the cursor
      o cx (number) the x-axis coordinate of the center of the circle, or ellipse
      o cy (number) the y-axis coordinate of the center of the circle, or ellipse
-     o fill (string) colour, gradient or image
+     o fill (string) colour, gradient or images
      o fill-opacity (number)
      o font (string)
      o font-family (string)
@@ -6562,7 +6562,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      o r (number) radius of the circle, ellipse or rounded corner on the rect
      o rx (number) horisontal radius of the ellipse
      o ry (number) vertical radius of the ellipse
-     o src (string) image URL, only works for @Element.image element
+     o src (string) images URL, only works for @Element.images element
      o stroke (string) stroke colour
      o stroke-dasharray (string) [“”, “none”, “`-`”, “`.`”, “`-.`”, “`-..`”, “`. `”, “`- `”, “`--`”, “`- .`”, “`--.`”, “`--..`”]
      o stroke-linecap (string) [“`butt`”, “`square`”, “`round`”]
@@ -6791,7 +6791,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         return res;
     };
     R._engine.image = function (svg, src, x, y, w, h) {
-        var el = $("image");
+        var el = $("images");
         $(el, {x: x, y: y, width: w, height: h, preserveAspectRatio: "none"});
         el.setAttributeNS(xlink, "href", src);
         svg.canvas && svg.canvas.appendChild(el);

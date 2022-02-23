@@ -138,7 +138,8 @@ class CosmeticController extends Controller
   }
     public function all()
     {
+        $cartItems = \Cart::getContent();
         $cosmetics=Cosmetic::all();
-        return view('allProductsPages.allcosmetics',compact('cosmetics'));
+        return view('allProductsPages.allcosmetics',compact('cosmetics','cartItems'));
     }
 }

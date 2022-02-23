@@ -15,21 +15,21 @@ The entry point is composeImages function. It expects an array of objects,
 which should be either canvases or SVGs (or a mix). It does a prevalidation
 of them, by verifying if they will be usable or not, later in the flow.
 After selecting only usable sources, it passes them to getGenerateTempImg
-function, which generates temporary images out of them. This function
+function, which generates temporary image out of them. This function
 expects that some of the passed sources (canvas or SVG) may still have
 problems being converted to an image and makes sure the promises system,
 used by composeImages function, moves forward. As an example, SVGs with
 missing information from header or with unsupported content, may lead to
-failure in generating the temporary image. Temporary images are required
+failure in generating the temporary image. Temporary image are required
 mostly on extracting content from SVGs, but this is also where the x/y
 offsets are extracted for each image which will be added. For SVGs in
 particular, their CSS rules have to be applied.
-After all temporary images are generated, they are overlapped using
+After all temporary image are generated, they are overlapped using
 getExecuteImgComposition function. This is where the destination canvas
 is set to the proper dimensions. It is then output by composeImages.
 This function returns a promise, which can be used to wait for the whole
 composition process. It requires to be asynchronous, because this is how
-temporary images load their data.
+temporary image load their data.
 */
 
 (function($) {
@@ -85,13 +85,13 @@ temporary images load their data.
             tempImg.onabort = function(evt) {
                 tempImg.successfullyLoaded = false;
                 console.log('Can\'t generate temp image from ' + tempImg.sourceDescription + '. It is possible that it is missing some properties or its content is not supported by this browser. Source component:', tempImg.sourceComponent);
-                successCallbackFunc(tempImg); //call successCallback, to allow snapshot of all working images
+                successCallbackFunc(tempImg); //call successCallback, to allow snapshot of all working image
             };
 
             tempImg.onerror = function(evt) {
                 tempImg.successfullyLoaded = false;
                 console.log('Can\'t generate temp image from ' + tempImg.sourceDescription + '. It is possible that it is missing some properties or its content is not supported by this browser. Source component:', tempImg.sourceComponent);
-                successCallbackFunc(tempImg); //call successCallback, to allow snapshot of all working images
+                successCallbackFunc(tempImg); //call successCallback, to allow snapshot of all working image
             };
 
             generateTempImageFromCanvasOrSvg(canvasOrSvgSource, tempImg);
@@ -252,7 +252,7 @@ temporary images load their data.
             }
 
             if ((maxX - minX <= 0) || (maxY - minY <= 0)) {
-                result = NEGATIVEIMAGESIZE; //this might occur on hidden images
+                result = NEGATIVEIMAGESIZE; //this might occur on hidden image
             } else {
                 destination.width = Math.round(maxX - minX);
                 destination.height = Math.round(maxY - minY);

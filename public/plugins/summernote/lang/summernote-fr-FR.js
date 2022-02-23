@@ -1,5 +1,5 @@
 /*!
- * 
+ *
  * Super simple WYSIWYG editor v0.8.20
  * https://summernote.org
  *
@@ -39,7 +39,7 @@ var __webpack_exports__ = {};
       },
       image: {
         image: 'Image',
-        insert: 'Insérer une image',
+        insert: 'Insérer une images',
         resizeFull: 'Taille originale',
         resizeHalf: 'Redimensionner à 50 %',
         resizeQuarter: 'Redimensionner à 25 %',
@@ -50,13 +50,13 @@ var __webpack_exports__ = {};
         shapeCircle: 'Forme: Cercle',
         shapeThumbnail: 'Forme: Vignette',
         shapeNone: 'Forme: Aucune',
-        dragImageHere: 'Faites glisser une image ou un texte dans ce cadre',
-        dropImage: 'Lachez l\'image ou le texte',
+        dragImageHere: 'Faites glisser une images ou un texte dans ce cadre',
+        dropImage: 'Lachez l\'images ou le texte',
         selectFromFiles: 'Choisir un fichier',
         maximumFileSize: 'Taille de fichier maximale',
         maximumFileSizeError: 'Taille maximale du fichier dépassée',
         url: 'URL de l\'image',
-        remove: 'Supprimer l\'image',
+        remove: 'Supprimer l\'images',
         original: 'Original'
       },
       video: {

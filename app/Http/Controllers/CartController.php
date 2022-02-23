@@ -13,10 +13,10 @@ use Stripe\Charge;
 class CartController extends Controller
 {
 
-    public function layout()
+    public function layout($id)
     {
-        $products = Product::all();
-        return view('layout.layout',compact('products'));
+        $bags=Bag::find($id);
+        return view('content.layout',compact('bags'));
     }
     public function productList()
     {
@@ -31,9 +31,18 @@ class CartController extends Controller
 
     public function cartList()
     {
+        $product=Product::all();
+        $cosmetic=Cosmetic::all();
+        $cartItems = \Cart::getContent();
+         //dd($cartItems);
+        return view('content.cart', compact('cartItems','cosmetic','product'));
+    }
+
+    public function wishList()
+    {
         $cartItems = \Cart::getContent();
         // dd($cartItems);
-        return view('content.cart', compact('cartItems'));
+        return view('content.wish', compact('cartItems'));
     }
 
 
@@ -87,17 +96,7 @@ class CartController extends Controller
         return redirect()->route('cart.list');
     }
 
-    public function productDetail($id)
-    {
-        $cartItems = \Cart::getContent();
-        $detail=Product::find($id);
-        $cosmetic=Cosmetic::find($id);
-        $bag=Product::find($id);
-        return view('content.productDetail',compact('detail','cosmetic',
-            'cartItems','bag'));
 
-
-    }
     public function checkout(Request $request)
     {
 
@@ -186,6 +185,29 @@ class CartController extends Controller
         }
         // return $responce;
         return redirect()->to('checkout');
+    }
+    public function productDetail($id)
+    {
+        $cartItems = \Cart::getContent();
+        $product=Product::find($id);
+        $cosmetic=Cosmetic::find($id);
+        $bag=Bag::find($id);
+        return view('content.productDetail',compact('product','cosmetic',
+            'cartItems','bag'));
+
+
+    }
+    public function cosmetic_detail($id)
+    {
+        $cartItems = \Cart::getContent();
+        $product=Cosmetic::find($id);
+        return view('detail_page.cosmetic',compact('product','cartItems'));
+    }
+    public function bag_detail($id)
+    {
+        $cartItems = \Cart::getContent();
+        $product = Bag::find($id);
+        return view('detail_page.bags',compact('product','cartItems'));
     }
 
 }

@@ -28,32 +28,32 @@
                             <div class="product-details-img">
                                 <div class="product-thumb">
                                     <div id="gallery" class="product-dec-slider-2 product-tab-left">
-                                        <a data-image="{{asset('image/products/'.$product->image)}}" data-zoom-image="{{asset('image/products/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/bags/'.$product->image)}}" data-zoom-image="{{asset('image/bags/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/bags/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products/'.$product->image)}}" data-zoom-image="{{asset('image/products/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/bags/'.$product->image)}}" data-zoom-image="{{asset('image/bags/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/bags/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products/'.$product->image)}}" data-zoom-image="{{asset('image/products/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/bags/'.$product->image)}}" data-zoom-image="{{asset('image/bags/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/bags/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products/'.$product->image)}}" data-zoom-image="{{asset('image/products/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/bags/'.$product->image)}}" data-zoom-image="{{asset('image/bags/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/bags/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products/'.$product->image)}}" data-zoom-image="{{asset('image/products/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="0" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/bags/'.$product->image)}}" data-zoom-image="{{asset('image/bags/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="0" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/bags/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products/'.$product->image)}}" data-zoom-image="{{asset('image/products/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="1" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/bags/'.$product->image)}}" data-zoom-image="{{asset('image/bags/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="1" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/bags/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products/'.$product->image)}}" data-zoom-image="{{asset('image/products/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="2" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/bags/'.$product->image)}}" data-zoom-image="{{asset('image/bags/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="2" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/bags/'.$product->image)}}" alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div class="zoompro-wrap product-zoom-right pl-20">
                                     <div class="zoompro-span">
-                                        <img class="zoompro blur-up lazyload" data-zoom-image="{{asset('image/products/'.$product->image)}}" alt="" src="{{asset('image/products/'.$product->image)}}" />
+                                        <img class="zoompro blur-up lazyload" data-zoom-image="{{asset('image/bags/'.$product->image)}}" alt="" src="{{asset('image/bags/'.$product->image)}}" />
                                     </div>
                                     <div class="product-labels"><span class="lbl on-sale">Sale</span><span class="lbl pr-label1">new</span></div>
                                     <div class="product-buttons">
@@ -62,13 +62,13 @@
                                     </div>
                                 </div>
                                 <div class="lightboximages">
-                                    <a href="{{asset('image/products/'.$product->image)}}" data-size="1462x2048"></a>
-                                    <a href="{{asset('image/products/'.$product->image)}}" data-size="1462x2048"></a>
-                                    <a href="{{asset('image/products/'.$product->image)}}" data-size="1462x2048"></a>
-                                    <a href="{{asset('image/products/'.$product->image)}}" data-size="1462x2048"></a>
-                                    <a href="{{asset('image/products/'.$product->image)}}" data-size="1462x2048"></a>
-                                    <a href="{{asset('image/products/'.$product->image)}}" data-size="1462x2048"></a>
-                                    <a href="{{asset('image/products/'.$product->image)}}" data-size="731x1024"></a>
+                                    <a href="{{asset('image/bags/'.$product->image)}}" data-size="1462x2048"></a>
+                                    <a href="{{asset('image/bags/'.$product->image)}}" data-size="1462x2048"></a>
+                                    <a href="{{asset('image/bags/'.$product->image)}}" data-size="1462x2048"></a>
+                                    <a href="{{asset('image/bags/'.$product->image)}}" data-size="1462x2048"></a>
+                                    <a href="{{asset('image/bags/'.$product->image)}}" data-size="1462x2048"></a>
+                                    <a href="{{asset('image/bags/'.$product->image)}}" data-size="1462x2048"></a>
+                                    <a href="{{asset('image/bags/'.$product->image)}}" data-size="731x1024"></a>
                                 </div>
 
                             </div>
@@ -248,28 +248,28 @@
                 <!--End Product Fearure-->
 
                 <!--Related Product Slider-->
-                <div class="related-product grid-products">
+                    <div class="related-product grid-products">
                     <header class="section-header">
                         <h2 class="section-header__title text-center h2"><span>Related Products</span></h2>
                         <p class="sub-heading">You can stop autoplay, increase/decrease aniamtion speed and number of grid to show and products from store admin.</p>
                     </header>
                     <div class="productPageSlider">
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
-                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
-                                    <img class="hover blur-up lazyload" data-src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- image -->
+                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" alt="image" title="product">
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up lazyload" data-src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" alt="image" title="product">
+                                    <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
                                     <!-- End product label -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
 
                                 <!-- Start product button -->
                                 <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
@@ -287,7 +287,7 @@
                                 </div>
                                 <!-- end product button -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
                             <!--start product details -->
                             <div class="product-details text-center">
                                 <!-- product name -->
@@ -311,30 +311,30 @@
                                 </div>
                                 <!-- Variant -->
                                 <ul class="swatches">
-                                    <li class="swatch medium rounded"><img src="{{asset('image/products/'.$product->image)}}" alt="image" /></li>
-                                    <li class="swatch medium rounded"><img src="{{asset('image/products/'.$product->image)}}" alt="image" /></li>
-                                    <li class="swatch medium rounded"><img src="{{asset('image/products/'.$product->image)}}" alt="image" /></li>
-                                    <li class="swatch medium rounded"><img src="{{asset('image/products/'.$product->image)}}" alt="image" /></li>
-                                    <li class="swatch medium rounded"><img src="{{asset('image/products/'.$product->image)}}" alt="image" /></li>
-                                    <li class="swatch medium rounded"><img src="{{asset('image/products/'.$product->image)}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{asset('image/bags/'.$product->image)}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{asset('image/bags/'.$product->image)}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{asset('image/bags/'.$product->image)}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{asset('image/bags/'.$product->image)}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{asset('image/bags/'.$product->image)}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{asset('image/bags/'.$product->image)}}" alt="image" /></li>
                                 </ul>
                                 <!-- End Variant -->
                             </div>
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
-                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
-                                    <img class="hover blur-up lazyload" data-src="{{url('assets/images/product-images/product-image5-1.jpg')}}" src="{{url('assets/images/product-images/product-image5-1.jpg')}}" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- image -->
+                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" alt="image" title="product">
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up lazyload" data-src="{{url('assets/image/product-image/product-image5-1.jpg')}}" src="{{url('assets/image/product-image/product-image5-1.jpg')}}" alt="image" title="product">
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
 
                                 <!-- Start product button -->
                                 <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">
@@ -352,7 +352,7 @@
                                 </div>
                                 <!-- end product button -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -375,31 +375,31 @@
                                 </div>
                                 <!-- Variant -->
                                 <ul class="swatches">
-                                    <li class="swatch medium rounded"><img src="{{url('assets/images/product-images/variant2-1.jpg')}}" alt="image" /></li>
-                                    <li class="swatch medium rounded"><img src="{{url('assets/images/product-images/variant2-2.jpg')}}" alt="image" /></li>
-                                    <li class="swatch medium rounded"><img src="{{url('assets/images/product-images/variant2-3.jpg')}}" alt="image" /></li>
-                                    <li class="swatch medium rounded"><img src="{{url('assets/images/product-images/variant2-4.jpg')}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{url('assets/image/product-image/variant2-1.jpg')}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{url('assets/image/product-image/variant2-2.jpg')}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{url('assets/image/product-image/variant2-3.jpg')}}" alt="image" /></li>
+                                    <li class="swatch medium rounded"><img src="{{url('assets/image/product-image/variant2-4.jpg')}}" alt="image" /></li>
                                 </ul>
                                 <!-- End Variant -->
                             </div>
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
-                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
-                                    <img class="hover blur-up lazyload" data-src="{{url('assets/images/product-images/product-image3-1.jpg')}}" src="{{url('assets/images/product-images/product-image3-1.jpg')}}" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- image -->
+                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" alt="image" title="product">
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up lazyload" data-src="{{url('assets/image/product-image/product-image3-1.jpg')}}" src="{{url('assets/image/product-image/product-image3-1.jpg')}}" alt="image" title="product">
+                                    <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels rectangular"><span class="lbl pr-label2">Hot</span></div>
                                     <!-- End product label -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
 
                                 <!-- Start product button -->
                                 <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
@@ -417,7 +417,7 @@
                                 </div>
                                 <!-- end product button -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -451,21 +451,21 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
-                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" alt="image" title="product" />
-                                    <!-- End images -->
-                                    <!-- Hover images -->
-                                    <img class="hover blur-up lazyload" data-src="{{url('assets/images/product-images/product-image4-1.jpg')}}" src="{{url('assets/images/product-images/product-image4-1.jpg')}}" alt="image" title="product" />
-                                    <!-- End hover images -->
+                                    <!-- image -->
+                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" alt="image" title="product" />
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up lazyload" data-src="{{url('assets/image/product-image/product-image4-1.jpg')}}" src="{{url('assets/image/product-image/product-image4-1.jpg')}}" alt="image" title="product" />
+                                    <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
                                     <!-- End product label -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
 
                                 <!-- Start product button -->
                                 <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
@@ -483,7 +483,7 @@
                                 </div>
                                 <!-- end product button -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -518,21 +518,21 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
-                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" src="{{url(asset('assets/images/product-images/product-image1.jpg'))}}" alt="image" title="product" />
-                                    <!-- End images -->
-                                    <!-- Hover images -->
-                                    <img class="hover blur-up lazyload" data-src="{{url('assets/images/product-images/product-image5-1.jpg')}}" src="{{url('assets/images/product-images/product-image5-1.jpg')}}" alt="image" title="product" />
-                                    <!-- End hover images -->
+                                    <!-- image -->
+                                    <img class="primary blur-up lazyload" data-src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" src="{{url(asset('assets/image/product-image/product-image1.jpg'))}}" alt="image" title="product" />
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up lazyload" data-src="{{url('assets/image/product-image/product-image5-1.jpg')}}" src="{{url('assets/image/product-image/product-image5-1.jpg')}}" alt="image" title="product" />
+                                    <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
                                     <!-- End product label -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
 
                                 <!-- Start product button -->
                                 <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
@@ -550,7 +550,7 @@
                                 </div>
                                 <!-- end product button -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -584,21 +584,21 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image6.jpg" src="assets/images/product-images/product-image6.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image6-1.jpg" src="assets/images/product-images/product-image6-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
                                     <!-- End product label -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
 
                                 <!-- Start product button -->
                                 <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
@@ -616,7 +616,7 @@
                                 </div>
                                 <!-- end product button -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -642,18 +642,18 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image7.jpg" src="assets/images/product-images/product-image7.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image7-1.jpg" src="assets/images/product-images/product-image7-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
 
                                 <!-- Start product button -->
                                 <form class="variants add" action="#" onclick="window.location.href='cart.html'"method="post">
@@ -671,7 +671,7 @@
                                 </div>
                                 <!-- end product button -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -707,23 +707,23 @@
                     </header>
                     <div class="productPageSlider">
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image6.jpg" src="assets/images/product-images/product-image6.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image6-1.jpg" src="assets/images/product-images/product-image6-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
                                     <!-- End product label -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -736,20 +736,20 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image7.jpg" src="assets/images/product-images/product-image7.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image7-1.jpg" src="assets/images/product-images/product-image7-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -762,21 +762,21 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image8.jpg" src="assets/images/product-images/product-image8.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image8-1.jpg" src="assets/images/product-images/product-image8-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
                             </div>
 
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -789,20 +789,20 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image9.jpg" src="assets/images/product-images/product-image9.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image9-1.jpg" src="assets/images/product-images/product-image9-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -815,20 +815,20 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image10.jpg" src="assets/images/product-images/product-image10.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image10-1.jpg" src="assets/images/product-images/product-image10-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -841,21 +841,21 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image13.jpg" src="assets/images/product-images/product-image13.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image13-1.jpg" src="assets/images/product-images/product-image13-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
                             </div>
 
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -868,20 +868,20 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image14.jpg" src="assets/images/product-images/product-image14.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image14-1.jpg" src="assets/images/product-images/product-image14-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">
@@ -894,20 +894,20 @@
                             <!-- End product details -->
                         </div>
                         <div class="col-12 item">
-                            <!-- start product images -->
+                            <!-- start product image -->
                             <div class="product-image">
-                                <!-- start product images -->
+                                <!-- start product image -->
                                 <a href="#">
-                                    <!-- images -->
+                                    <!-- image -->
                                     <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image15.jpg" src="assets/images/product-images/product-image15.jpg" alt="image" title="product">
-                                    <!-- End images -->
-                                    <!-- Hover images -->
+                                    <!-- End image -->
+                                    <!-- Hover image -->
                                     <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image15-1.jpg" src="assets/images/product-images/product-image15-1.jpg" alt="image" title="product">
-                                    <!-- End hover images -->
+                                    <!-- End hover image -->
                                 </a>
-                                <!-- end product images -->
+                                <!-- end product image -->
                             </div>
-                            <!-- end product images -->
+                            <!-- end product image -->
 
                             <!--start product details -->
                             <div class="product-details text-center">

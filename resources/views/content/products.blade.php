@@ -5,13 +5,15 @@
 
     {{----}}
     <!--Home slider-->
+
+{{--
     <div class="slideshow slideshow-wrapper pb-section sliderFull">
         <div class="home-slideshow">
             <div class="slide">
                 <div class="blur-up lazyload bg-size">
                     <img class="blur-up lazyload bg-img"
-                         data-src="{{asset('assets/images/slideshow-banners/home5-banner2.jpg')}}"
-                         src="{{asset('assets/images/slideshow-banners/home5-banner2.jpg')}}"
+                         data-src="{{asset('assets/image/slideshow-banners/home5-banner2.jpg')}}"
+                         src="{{asset('assets/image/slideshow-banners/home5-banner2.jpg')}}"
                          alt="Shop Our New Collection"
                          title="Shop Our New Collection"/>
                     <div class="slideshow__text-wrap slideshow__overlay classic bottom">
@@ -28,8 +30,8 @@
             <div class="slide">
                 <div class="blur-up lazyload bg-size">
                     <img class="blur-up lazyload bg-img"
-                         data-src="{{asset('assets/images/slideshow-banners/home7-banner1.jpg')}}"
-                         src="{{asset('assets/images/slideshow-banners/home7-banner1.jpg')}}"
+                         data-src="{{asset('assets/image/slideshow-banners/home7-banner1.jpg')}}"
+                         src="{{asset('assets/image/slideshow-banners/home7-banner1.jpg')}}"
                          alt="Summer Bikini Collection"
                          title="Summer Bikini Collection"/>
                     <div class="slideshow__text-wrap slideshow__overlay classic bottom">
@@ -46,6 +48,8 @@
             </div>
         </div>
     </div>
+--}}
+
     <!--End Home slider-->
     <!--Collection Tab slider-->
     <div class="tab-slider-product section">
@@ -65,8 +69,11 @@
                         </ul>
                         <div class="tab_container-fluid">
                             <div id="tab1" class="tab_content grid-products">
+                                <div class="row">
+                                    <a href="{{url('allProducts')}}"><span style=";font-size: 15px;opacity: 70%;">View All</span></a>
+                                </div>
                                 <div class="productSlider">
-                                    @foreach ($products->take(5) as $product)
+                                    @foreach ($products->take(2) as $product)
                                         <div class="col-12 item">
                                             <!-- start product image -->
                                             <div class="product-image">
@@ -74,13 +81,15 @@
                                                 <a href="{{url("productDetail/$product->id") }}">
                                                     <!-- image -->
                                                     <img class="primary blur-up lazyload"
-                                                         data-src="/image/products/{{ $product->image }}"
-                                                         src="/image/products/{{ $product->image }}" alt="image" title="product">
+                                                         data-src="{{asset('image/products/'.$product->image)}}"
+                                                         src="{{asset('image/products/'.$product->image)}}" alt="image"
+                                                         title="product">
                                                     <!-- End image -->
                                                     <!-- Hover image -->
                                                     <img class="hover blur-up lazyload"
-                                                         data-src="/image/products/{{ $product->image }}"
-                                                         style="" src="/image/products/{{ $product->image }}" alt="image"
+                                                         data-src="{{asset('image/products/'.$product->image)}}"
+                                                         style="" src="{{asset('image/products/'.$product->image)}}"
+                                                         alt="image"
                                                          title="product">
                                                     <!-- End hover image -->
                                                     <!-- product label -->
@@ -156,17 +165,23 @@
                                                 <!-- Variant -->
                                                 <ul class="swatches">
                                                     <li class="swatch medium rounded"><img
-                                                            src="/image/products/{{ $product->image }}" alt="image"/></li>
+                                                            src="{{asset('image/products/'.$product->image)}}"
+                                                            alt="image"/>
+                                                    </li>
                                                     <li class="swatch medium rounded"><img
-                                                            src="/image/products/{{ $product->image }}" alt="image"/></li>
+                                                            src="{{asset('image/products/'.$product->image)}}"
+                                                            alt="image"/>
+                                                    </li>
                                                     <li class="swatch medium rounded"><img
-                                                            src="/image/products/{{ $product->image }}" alt="image"/></li>
-                                                  {{--  <li class="swatch medium rounded"><img
-                                                            src="/image/products/{{ $product->image }}" alt="image"/></li>
-                                                    <li class="swatch medium rounded"><img
-                                                            src="/image/products/{{ $product->image }}" alt="image"/></li>
-                                                    <li class="swatch medium rounded"><img
-                                                            src="/image/products/{{ $product->image }}" alt="image"/></li>--}}
+                                                            src="{{asset('image/products/'.$product->image)}}"
+                                                            alt="image"/>
+                                                    </li>
+                                                    {{--  <li class="swatch medium rounded"><img
+                                                              src="/image/products/{{ $product->image }}" alt="image"/></li>
+                                                      <li class="swatch medium rounded"><img
+                                                              src="/image/products/{{ $product->image }}" alt="image"/></li>
+                                                      <li class="swatch medium rounded"><img
+                                                              src="/image/products/{{ $product->image }}" alt="image"/></li>--}}
                                                 </ul>
                                                 <!-- End Variant -->
                                             </div>
@@ -180,10 +195,10 @@
                                                 <!-- start product image -->
                                                 <a href="short-description.html">
                                                     <!-- image -->
-                                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image2.jpg" src="assets/images/product-images/product-image2.jpg" alt="image" title="product">
+                                                    <img class="primary blur-up lazyload" data-src="assets/image/product-image/product-image2.jpg" src="assets/image/product-image/product-image2.jpg" alt="image" title="product">
                                                     <!-- End image -->
                                                     <!-- Hover image -->
-                                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image2-1.jpg" src="assets/images/product-images/product-image2-1.jpg" alt="image" title="product">
+                                                    <img class="hover blur-up lazyload" data-src="assets/image/product-image/product-image2-1.jpg" src="assets/image/product-image/product-image2-1.jpg" alt="image" title="product">
                                                     <!-- End hover image -->
                                                 </a>
                                                 <!-- end product image -->
@@ -232,10 +247,10 @@
                                                 </div>
                                                 <!-- Variant -->
                                                 <ul class="swatches">
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant2-1.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant2-2.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant2-3.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant2-4.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant2-1.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant2-2.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant2-3.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant2-4.jpg" alt="image" /></li>
                                                 </ul>
                                                 <!-- End Variant -->
                                             </div>
@@ -247,10 +262,10 @@
                                                 <!-- start product image -->
                                                 <a href="short-description.html">
                                                     <!-- image -->
-                                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image3.jpg" src="assets/images/product-images/product-image3.jpg" alt="image" title="product">
+                                                    <img class="primary blur-up lazyload" data-src="assets/image/product-image/product-image3.jpg" src="assets/image/product-image/product-image3.jpg" alt="image" title="product">
                                                     <!-- End image -->
                                                     <!-- Hover image -->
-                                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image3-1.jpg" src="assets/images/product-images/product-image3-1.jpg" alt="image" title="product">
+                                                    <img class="hover blur-up lazyload" data-src="assets/image/product-image/product-image3-1.jpg" src="assets/image/product-image/product-image3-1.jpg" alt="image" title="product">
                                                     <!-- End hover image -->
                                                     <!-- product label -->
                                                     <div class="product-labels rectangular"><span class="lbl pr-label2">Hot</span></div>
@@ -303,10 +318,10 @@
                                                 </div>
                                                 <!-- Variant -->
                                                 <ul class="swatches">
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant3-1.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant3-2.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant3-3.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant3-4.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant3-1.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant3-2.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant3-3.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant3-4.jpg" alt="image" /></li>
                                                 </ul>
                                                 <!-- End Variant -->
                                             </div>
@@ -318,10 +333,10 @@
                                                 <!-- start product image -->
                                                 <a href="short-description.html">
                                                     <!-- image -->
-                                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image4.jpg" src="assets/images/product-images/product-image4.jpg" alt="image" title="product" />
+                                                    <img class="primary blur-up lazyload" data-src="assets/image/product-image/product-image4.jpg" src="assets/image/product-image/product-image4.jpg" alt="image" title="product" />
                                                     <!-- End image -->
                                                     <!-- Hover image -->
-                                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image4-1.jpg" src="assets/images/product-images/product-image4-1.jpg" alt="image" title="product" />
+                                                    <img class="hover blur-up lazyload" data-src="assets/image/product-image/product-image4-1.jpg" src="assets/image/product-image/product-image4-1.jpg" alt="image" title="product" />
                                                     <!-- End hover image -->
                                                     <!-- product label -->
                                                     <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
@@ -375,10 +390,10 @@
                                                 </div>
                                                 <!-- Variant -->
                                                 <ul class="swatches">
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant4-1.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant4-2.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant4-3.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant4-4.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant4-1.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant4-2.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant4-3.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant4-4.jpg" alt="image" /></li>
                                                 </ul>
                                                 <!-- End Variant -->
                                             </div>
@@ -390,10 +405,10 @@
                                                 <!-- start product image -->
                                                 <a href="short-description.html">
                                                     <!-- image -->
-                                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-image5.jpg" src="assets/images/product-images/product-image5.jpg" alt="image" title="product" />
+                                                    <img class="primary blur-up lazyload" data-src="assets/image/product-image/product-image5.jpg" src="assets/image/product-image/product-image5.jpg" alt="image" title="product" />
                                                     <!-- End image -->
                                                     <!-- Hover image -->
-                                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-image5-1.jpg" src="assets/images/product-images/product-image5-1.jpg" alt="image" title="product" />
+                                                    <img class="hover blur-up lazyload" data-src="assets/image/product-image/product-image5-1.jpg" src="assets/image/product-image/product-image5-1.jpg" alt="image" title="product" />
                                                     <!-- End hover image -->
                                                     <!-- product label -->
                                                     <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
@@ -446,10 +461,10 @@
                                                 </div>
                                                 <!-- Variant -->
                                                 <ul class="swatches">
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant3-1.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant3-2.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant3-3.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant3-4.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant3-1.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant3-2.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant3-3.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="assets/image/product-image/variant3-4.jpg" alt="image" /></li>
                                                 </ul>
                                                 <!-- End Variant -->
                                             </div>
@@ -1201,24 +1216,37 @@
 
     <!--Collection Box slider-->
     <div class="collection-box section">
-        <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <a href="{{url('allcosmetics')}}"><span style="float: right;font-size: 15px;opacity: 70%">View All</span></a>
+            </div>
             <div class="collection-grid">
                 {{--
                                 <div class="collection-grid-item">
                                     <a href="collection-page.html" class="collection-grid-item__link">
-                                        <img data-src="assets/images/collection/fashion.jpg"
-                                             src="assets/images/collection/fashion.jpg" alt="Fashion" class="blur-up lazyload"/>
+                                        <img data-src="assets/image/collection/fashion.jpg"
+                                             src="assets/image/collection/fashion.jpg" alt="Fashion" class="blur-up lazyload"/>
                                         <div class="collection-grid-item__title-wrapper">
                                             <h3 class="collection-grid-item__title btn btn--secondary no-border">Fashion</h3>
                                         </div>
                                     </a>
                                 </div>
                 --}}
-                @foreach($cosmetics as $cosmetic)
+                {{--   @if (empty($status->replies))
+
+                       <div class="media-body reply-body">
+                           @foreach ($status->replies as $reply)
+                               <p>{{ $reply->body }}</p>
+                           @endforeach
+                       </div>
+                   @endif--}}
+
+                @foreach($cosmetics->take(2) as $cosmetic)
+
                     <div class="collection-grid-item ">
-                        <a href="{{url("productDetail/$cosmetic->id") }}" class="collection-grid-item__link m-1">
-                            <img class="blur-up lazyload" data-src="/image/cosmetic/{{$cosmetic->image}}"
-                                 src="/image/cosmetic/{{$cosmetic->image}}" alt="Cosmetic"/>
+                        <a href="{{url("cosmetic_detail/$cosmetic->id") }}" class="collection-grid-item__link m-1">
+                            <img class="blur-up lazyload" data-src="{{asset('image/cosmetic/'.$cosmetic->image)}}"
+                                 src="{{asset('image/cosmetic/'.$cosmetic->image)}}" alt="Cosmetic"/>
                             <div class="collection-grid-item__title-wrapper">
 
                                 <form class="add-to-cart" action="{{ route('cart.store') }}" method="POST"
@@ -1240,11 +1268,12 @@
                             </div>
                         </a>
                     </div>
+
                 @endforeach
 
                 {{--   <div class="collection-grid-item blur-up lazyloaded">
                    <a href="collection-page.html" class="collection-grid-item__link">
-                       <img data-src="assets/images/collection/bag.jpg" src="assets/images/collection/bag.jpg"
+                       <img data-src="assets/image/collection/bag.jpg" src="assets/image/collection/bag.jpg"
                             alt="Bag" class="blur-up lazyload"/>
                        <div class="collection-grid-item__title-wrapper">
                            <h3 class="collection-grid-item__title btn btn--secondary no-border">Bag</h3>
@@ -1253,8 +1282,8 @@
                </div>
                <div class="collection-grid-item">
                    <a href="collection-page.html" class="collection-grid-item__link">
-                       <img data-src="assets/images/collection/accessories.jpg"
-                            src="assets/images/collection/accessories.jpg" alt="Accessories"
+                       <img data-src="assets/image/collection/accessories.jpg"
+                            src="assets/image/collection/accessories.jpg" alt="Accessories"
                             class="blur-up lazyload"/>
                        <div class="collection-grid-item__title-wrapper">
                            <h3 class="collection-grid-item__title btn btn--secondary no-border">Accessories</h3>
@@ -1263,7 +1292,7 @@
                </div>
                <div class="collection-grid-item">
                    <a href="collection-page.html" class="collection-grid-item__link">
-                       <img data-src="assets/images/collection/shoes.jpg" src="assets/images/collection/shoes.jpg"
+                       <img data-src="assets/image/collection/shoes.jpg" src="assets/image/collection/shoes.jpg"
                             alt="Shoes" class="blur-up lazyload"/>
                        <div class="collection-grid-item__title-wrapper">
                            <h3 class="collection-grid-item__title btn btn--secondary no-border">Shoes</h3>
@@ -1272,8 +1301,8 @@
                </div>
                <div class="collection-grid-item">
                    <a href="collection-page.html" class="collection-grid-item__link">
-                       <img data-src="assets/images/collection/jewellry.jpg"
-                            src="assets/images/collection/jewellry.jpg" alt="Jewellry" class="blur-up lazyload"/>
+                       <img data-src="assets/image/collection/jewellry.jpg"
+                            src="assets/image/collection/jewellry.jpg" alt="Jewellry" class="blur-up lazyload"/>
                        <div class="collection-grid-item__title-wrapper">
                            <h3 class="collection-grid-item__title btn btn--secondary no-border">Jewellry</h3>
                        </div>
@@ -1328,21 +1357,25 @@
             </div>
             <div class="grid-products">
                 <div class="row">
-                    @foreach($bags as $bag)
+                    <a href="{{url('allProducts1')}}"><span style="float: right;font-size: 15px;opacity: 70%">View All</span></a>
+                </div>
+                <div class="row">
+{{--
+                    @foreach($bags->take(2) as $bag)
                         <div class="col-6 col-sm-6 col-md-3 col-lg-3 item grid-view-item style2">
                             <div class="grid-view_image" style="width: 70%">
                                 <!-- start product image -->
-                                <a href="{{url("productDetail/$bag->id") }}" class="grid-view-item__link">
+                                <a href="{{url("bag_detail/$bag->id") }}" class="grid-view-item__link">
                                     <!-- image -->
                                     <img class="grid-view-item__image primary blur-up lazyload"
-                                         data-src="/image/bags/{{$bag->image}}"
-                                         src="/image/bags/{{$bag->image}}" alt="image"
+                                         data-src="{{asset('image/bags/'.$bag->image)}}"
+                                         src="{{asset('image/bags/'.$bag->image)}}" alt="image"
                                          title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
                                     <img class="grid-view-item__image hover blur-up lazyload"
-                                         data-src="/image/bags/{{$bag->image}}"
-                                         src="/image/bags/{{$bag->image}}" alt="image"
+                                         data-src="{{asset('image/bags/'.$bag->image)}}"
+                                         src="{{asset('image/bags/'.$bag->image)}}" alt="image"
                                          title="product">
                                     <!-- End hover image -->
                                     <!-- product label -->
@@ -1369,23 +1402,28 @@
                                     <div class="button-set">
                                         <a href="javascript:void(0)" title="Quick View"
                                            class="quick-view-popup quick-view" data-toggle="modal"
-                                           data-target="#content_quickview">
+                                           data-target="#content_quickviewBag">
                                             <i class="icon anm anm-search-plus-r"></i>
                                         </a>
                                         <!-- Start product button -->
-{{--                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'"--}}
-{{--                                              method="post">--}}
-                                            <form class="add-to-cart" action="{{ route('cart.store') }}" method="POST"
-                                                  enctype="multipart/form-data">
-                                                @csrf
-                                                <input type="hidden" value="{{ $bag->id }}" name="id">
-                                                <input type="hidden" value="{{ $bag->name }}" name="name">
-                                                <input type="hidden" value="{{ $bag->price }}" name="price">
-                                                <input type="hidden" value="{{ $bag->image }}" name="image">
-                                                <input type="hidden" value="1" name="quantity">
-                                                <button class="btn cartIcon btn-addto-cart" type="submit" tabindex="0">
-                                                     <i class="icon anm anm-bag-l"></i> </button>
-                                            </form>
+
+
+                                        --}}
+{{--                                        <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">--}}{{--
+
+
+
+                                        <form class="add-to-cart" action="{{ route('cart.store') }}" method="POST"
+                                              enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" value="{{ $bag->id }}" name="id">
+                                            <input type="hidden" value="{{ $bag->name }}" name="name">
+                                            <input type="hidden" value="{{ $bag->price }}" name="price">
+                                            <input type="hidden" value="{{ $bag->image }}" name="image">
+                                            <input type="hidden" value="1" name="quantity">
+                                            <button class="btn cartIcon btn-addto-cart" type="submit" tabindex="0">
+                                                <i class="icon anm anm-bag-l"></i></button>
+                                        </form>
 
 
                                         <div class="wishlist-btn">
@@ -1405,37 +1443,43 @@
                                 <!-- Variant -->
                                 <ul class="swatches text-center">
                                     <li class="swatch medium rounded"><img
-                                            src="/image/bags/{{$bag->image}}" alt="image"/></li>
+                                            src="{{asset('image/bags/'.$bag->image)}}" alt="image"/></li>
                                     <li class="swatch medium rounded"><img
-                                            src="/image/bags/{{$bag->image}}" alt="image"/></li>
+                                            src="{{asset('image/bags/'.$bag->image)}}" alt="image"/></li>
                                     <li class="swatch medium rounded"><img
-                                            src="/image/bags/{{$bag->image}}" alt="image"/></li>
-                                     {{--   <li class="swatch medium rounded"><img
-                                                src="/image/bags/{{$bag->image}}" alt="image"/></li>
-                                        <li class="swatch medium rounded"><img
-                                                src="/image/bags/{{$bag->image}}" alt="image"/></li>
-                                        <li class="swatch medium rounded"><img
-                                                src="/image/bags/{{$bag->image}}" alt="image"/></li>--}}
+                                            src="{{asset('image/bags/'.$bag->image)}}" alt="image"/></li>
+
+
+                                --}}
+{{--    <li class="swatch medium rounded"><img
+                                            src="{{asset('image/bags/'.$bag->image)}}" alt="image"/></li>
+                                    <li class="swatch medium rounded"><img
+                                            src="{{asset('image/bags/'.$bag->image)}}" alt="image"/></li>
+                                    <li class="swatch medium rounded"><img
+                                            src="{{asset('image/bags/'.$bag->image)}}" alt="image"/></li>
+--}}{{--
+
                                 </ul>
                                 <!-- End Variant -->
                                 <!-- End product details -->
                             </div>
                         </div>
                     @endforeach
+--}}
                     {{--   <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">
                            <div class="grid-view_image">
                                <!-- start product image -->
                                <a href="product-accordion.html" class="grid-view-item__link">
                                    <!-- image -->
                                    <img class="grid-view-item__image primary blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image2.jpg"
-                                        src="assets/images/product-images/product-image2.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image2.jpg"
+                                        src="assets/image/product-image/product-image2.jpg" alt="image"
                                         title="product">
                                    <!-- End image -->
                                    <!-- Hover image -->
                                    <img class="grid-view-item__image hover blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image2-1.jpg"
-                                        src="assets/images/product-images/product-image2-1.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image2-1.jpg"
+                                        src="assets/image/product-image/product-image2-1.jpg" alt="image"
                                         title="product">
                                    <!-- End hover image -->
                                    <!-- product label -->
@@ -1485,13 +1529,13 @@
                                <!-- Variant -->
                                <ul class="swatches text-center">
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant2-1.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant2-1.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant2-2.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant2-2.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant2-3.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant2-3.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant2-4.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant2-4.jpg" alt="image"/></li>
                                </ul>
                                <!-- End Variant -->
                                <!-- End product details -->
@@ -1503,14 +1547,14 @@
                                <a href="product-accordion.html" class="grid-view-item__link">
                                    <!-- image -->
                                    <img class="grid-view-item__image primary blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image3.jpg"
-                                        src="assets/images/product-images/product-image3.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image3.jpg"
+                                        src="assets/image/product-image/product-image3.jpg" alt="image"
                                         title="product">
                                    <!-- End image -->
                                    <!-- Hover image -->
                                    <img class="grid-view-item__image hover blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image3-1.jpg"
-                                        src="assets/images/product-images/product-image3-1.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image3-1.jpg"
+                                        src="assets/image/product-image/product-image3-1.jpg" alt="image"
                                         title="product">
                                    <!-- End hover image -->
                                    <!-- product label -->
@@ -1560,13 +1604,13 @@
                                <!-- Variant -->
                                <ul class="swatches text-center">
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant3-1.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant3-1.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant3-2.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant3-2.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant3-3.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant3-3.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant3-4.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant3-4.jpg" alt="image"/></li>
                                </ul>
                                <!-- End Variant -->
                                <!-- End product details -->
@@ -1578,14 +1622,14 @@
                                <a href="product-accordion.html" class="grid-view-item__link">
                                    <!-- image -->
                                    <img class="grid-view-item__image primary blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image4.jpg"
-                                        src="assets/images/product-images/product-image4.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image4.jpg"
+                                        src="assets/image/product-image/product-image4.jpg" alt="image"
                                         title="product">
                                    <!-- End image -->
                                    <!-- Hover image -->
                                    <img class="grid-view-item__image hover blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image4-1.jpg"
-                                        src="assets/images/product-images/product-image4-1.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image4-1.jpg"
+                                        src="assets/image/product-image/product-image4-1.jpg" alt="image"
                                         title="product">
                                    <!-- End hover image -->
                                    <!-- product label -->
@@ -1635,13 +1679,13 @@
                                <!-- Variant -->
                                <ul class="swatches text-center">
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant4-1.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant4-1.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant4-2.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant4-2.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant4-3.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant4-3.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant4-4.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant4-4.jpg" alt="image"/></li>
                                </ul>
                                <!-- End Variant -->
                                <!-- End product details -->
@@ -1653,14 +1697,14 @@
                                <a href="product-accordion.html" class="grid-view-item__link">
                                    <!-- image -->
                                    <img class="grid-view-item__image primary blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image5.jpg"
-                                        src="assets/images/product-images/product-image5.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image5.jpg"
+                                        src="assets/image/product-image/product-image5.jpg" alt="image"
                                         title="product">
                                    <!-- End image -->
                                    <!-- Hover image -->
                                    <img class="grid-view-item__image hover blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image5-1.jpg"
-                                        src="assets/images/product-images/product-image5-1.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image5-1.jpg"
+                                        src="assets/image/product-image/product-image5-1.jpg" alt="image"
                                         title="product">
                                    <!-- End hover image -->
                                    <!-- product label -->
@@ -1710,13 +1754,13 @@
                                <!-- Variant -->
                                <ul class="swatches text-center">
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant3-1.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant3-1.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant3-2.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant3-2.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant3-3.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant3-3.jpg" alt="image"/></li>
                                    <li class="swatch medium rounded"><img
-                                           src="assets/images/product-images/variant3-4.jpg" alt="image"/></li>
+                                           src="assets/image/product-image/variant3-4.jpg" alt="image"/></li>
                                </ul>
                                <!-- End Variant -->
                                <!-- End product details -->
@@ -1728,14 +1772,14 @@
                                <a href="product-accordion.html" class="grid-view-item__link">
                                    <!-- image -->
                                    <img class="grid-view-item__image primary blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image16.jpg"
-                                        src="assets/images/product-images/product-image16.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image16.jpg"
+                                        src="assets/image/product-image/product-image16.jpg" alt="image"
                                         title="product">
                                    <!-- End image -->
                                    <!-- Hover image -->
                                    <img class="grid-view-item__image hover blur-up lazyload"
-                                        data-src="assets/images/product-images/product-image16-1.jpg"
-                                        src="assets/images/product-images/product-image16-1.jpg" alt="image"
+                                        data-src="assets/image/product-image/product-image16-1.jpg"
+                                        src="assets/image/product-image/product-image16-1.jpg" alt="image"
                                         title="product">
                                    <!-- End hover image -->
                                </a>
@@ -1880,6 +1924,7 @@
             </div>
         </div>
     </div>
+
     <!--End Store Feature-->
 
 

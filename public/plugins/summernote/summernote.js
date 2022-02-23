@@ -1,5 +1,5 @@
 /*!
- * 
+ *
  * Super simple WYSIWYG editor v0.8.20
  * https://summernote.org
  *
@@ -62,8 +62,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default().extend((jquery__WEBPACK_IMPORTED_M
       shapeCircle: 'Shape: Circle',
       shapeThumbnail: 'Shape: Thumbnail',
       shapeNone: 'Shape: None',
-      dragImageHere: 'Drag image or text here',
-      dropImage: 'Drop image or Text',
+      dragImageHere: 'Drag images or text here',
+      dropImage: 'Drop images or Text',
       selectFromFiles: 'Select from files',
       maximumFileSize: 'Maximum file size',
       maximumFileSizeError: 'Maximum file size exceeded.',
@@ -208,7 +208,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__1145__;
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -222,14 +222,14 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__1145__;
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -242,7 +242,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__1145__;
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -254,12 +254,12 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__1145__;
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -270,7 +270,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__1145__;
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -3508,10 +3508,10 @@ function readFileAsDataURL(file) {
 /**
  * @method createImage
  *
- * create `<image>` from url string
+ * create `<images>` from url string
  *
  * @param {String} url
- * @return {Promise} - then: $image
+ * @return {Promise} - then: $images
  */
 
 function createImage(url) {
@@ -5814,7 +5814,7 @@ var Editor = /*#__PURE__*/function () {
       };
     }
     /**
-     * insert image
+     * insert images
      *
      * @param {String} src
      * @param {String|Function} param
@@ -5847,7 +5847,7 @@ var Editor = /*#__PURE__*/function () {
 
         _this3.afterCommand();
       }).fail(function (e) {
-        _this3.context.triggerEvent('image.upload.error', e);
+        _this3.context.triggerEvent('images.upload.error', e);
       });
     }
     /**
@@ -5864,12 +5864,12 @@ var Editor = /*#__PURE__*/function () {
         var filename = file.name;
 
         if (_this4.options.maximumImageFileSize && _this4.options.maximumImageFileSize < file.size) {
-          _this4.context.triggerEvent('image.upload.error', _this4.lang.image.maximumFileSizeError);
+          _this4.context.triggerEvent('images.upload.error', _this4.lang.image.maximumFileSizeError);
         } else {
           readFileAsDataURL(file).then(function (dataURL) {
             return _this4.insertImage(dataURL, filename);
           }).fail(function () {
-            _this4.context.triggerEvent('image.upload.error');
+            _this4.context.triggerEvent('images.upload.error');
           });
         }
       });
@@ -5885,7 +5885,7 @@ var Editor = /*#__PURE__*/function () {
       var callbacks = this.options.callbacks; // If onImageUpload set,
 
       if (callbacks.onImageUpload) {
-        this.context.triggerEvent('image.upload', files); // else insert Image as dataURL
+        this.context.triggerEvent('images.upload', files); // else insert Image as dataURL
       } else {
         this.insertImagesAsDataURL(files);
       }
@@ -6193,7 +6193,7 @@ var Clipboard = /*#__PURE__*/function () {
       if (clipboardData && clipboardData.items && clipboardData.items.length) {
         var item = clipboardData.items.length > 1 ? clipboardData.items[1] : lists.head(clipboardData.items);
 
-        if (item.kind === 'file' && item.type.indexOf('image/') !== -1) {
+        if (item.kind === 'file' && item.type.indexOf('images/') !== -1) {
           // paste img file
           this.context.invoke('editor.insertImagesOrCallback', [item.getAsFile()]);
           event.preventDefault();
@@ -6867,7 +6867,7 @@ var Handle = /*#__PURE__*/function () {
           top: pos.top,
           width: imageSize.w,
           height: imageSize.h
-        }).data('target', $image); // save current image element.
+        }).data('target', $image); // save current images element.
 
         var origImageObj = new Image();
         origImageObj.src = $image.attr('src');
@@ -7748,7 +7748,7 @@ var Buttons = /*#__PURE__*/function () {
       });
     }
     /**
-     * image: [
+     * images: [
      *   ['imageResize', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
      *   ['float', ['floatLeft', 'floatRight', 'floatNone']],
      *   ['remove', ['removeMedia']],
@@ -8571,8 +8571,8 @@ var ImageDialog = /*#__PURE__*/function () {
       }
 
       var $container = this.options.dialogsInBody ? this.$body : this.options.container;
-      var body = ['<div class="form-group note-form-group note-group-select-from-files">', '<label for="note-dialog-image-file-' + this.options.id + '" class="note-form-label">' + this.lang.image.selectFromFiles + '</label>', '<input id="note-dialog-image-file-' + this.options.id + '" class="note-image-input form-control-file note-form-control note-input" ', ' type="file" name="files" accept="' + this.options.acceptImageFileTypes + '" multiple="multiple"/>', imageLimitation, '</div>', '<div class="form-group note-group-image-url">', '<label for="note-dialog-image-url-' + this.options.id + '" class="note-form-label">' + this.lang.image.url + '</label>', '<input id="note-dialog-image-url-' + this.options.id + '" class="note-image-url form-control note-form-control note-input" type="text"/>', '</div>'].join('');
-      var buttonClass = 'btn btn-primary note-btn note-btn-primary note-image-btn';
+      var body = ['<div class="form-group note-form-group note-group-select-from-files">', '<label for="note-dialog-images-file-' + this.options.id + '" class="note-form-label">' + this.lang.image.selectFromFiles + '</label>', '<input id="note-dialog-images-file-' + this.options.id + '" class="note-images-input form-control-file note-form-control note-input" ', ' type="file" name="files" accept="' + this.options.acceptImageFileTypes + '" multiple="multiple"/>', imageLimitation, '</div>', '<div class="form-group note-group-images-url">', '<label for="note-dialog-images-url-' + this.options.id + '" class="note-form-label">' + this.lang.image.url + '</label>', '<input id="note-dialog-images-url-' + this.options.id + '" class="note-images-url form-control note-form-control note-input" type="text"/>', '</div>'].join('');
+      var buttonClass = 'btn btn-primary note-btn note-btn-primary note-images-btn';
       var footer = "<input type=\"button\" href=\"#\" class=\"".concat(buttonClass, "\" value=\"").concat(this.lang.image.insert, "\" disabled>");
       this.$dialog = this.ui.dialog({
         title: this.lang.image.insert,
@@ -8610,10 +8610,10 @@ var ImageDialog = /*#__PURE__*/function () {
         _this.context.invoke('editor.restoreRange');
 
         if (typeof data === 'string') {
-          // image url
+          // images url
           // If onImageLinkInsert set,
           if (_this.options.callbacks.onImageLinkInsert) {
-            _this.context.triggerEvent('image.link.insert', data);
+            _this.context.triggerEvent('images.link.insert', data);
           } else {
             _this.context.invoke('editor.insertImage', data);
           }
@@ -8626,7 +8626,7 @@ var ImageDialog = /*#__PURE__*/function () {
       });
     }
     /**
-     * show image dialog
+     * show images dialog
      *
      * @param {jQuery} $dialog
      * @return {Promise}
@@ -8638,11 +8638,11 @@ var ImageDialog = /*#__PURE__*/function () {
       var _this2 = this;
 
       return external_jQuery_default().Deferred(function (deferred) {
-        var $imageInput = _this2.$dialog.find('.note-image-input');
+        var $imageInput = _this2.$dialog.find('.note-images-input');
 
-        var $imageUrl = _this2.$dialog.find('.note-image-url');
+        var $imageUrl = _this2.$dialog.find('.note-images-url');
 
-        var $imageBtn = _this2.$dialog.find('.note-image-btn');
+        var $imageBtn = _this2.$dialog.find('.note-images-btn');
 
         _this2.ui.onDialogShown(_this2.$dialog, function () {
           _this2.context.triggerEvent('dialog.shown'); // Cloning imageInput to clear element.
@@ -8737,7 +8737,7 @@ var ImagePopover = /*#__PURE__*/function () {
     key: "initialize",
     value: function initialize() {
       this.$popover = this.ui.popover({
-        className: 'note-image-popover'
+        className: 'note-images-popover'
       }).render().appendTo(this.options.container);
       var $content = this.$popover.find('.popover-content,.note-popover-content');
       this.context.invoke('buttons.build', $content, this.options.popover.image);
@@ -9796,7 +9796,7 @@ var HintPopover = /*#__PURE__*/function () {
     dialogsInBody: false,
     dialogsFade: false,
     maximumImageFileSize: null,
-    acceptImageFileTypes: "image/*",
+    acceptImageFileTypes: "images/*",
     callbacks: {
       onBeforeCommand: null,
       onBlur: null,

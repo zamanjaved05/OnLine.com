@@ -98,7 +98,7 @@ class ProductController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
+            $destinationPath = 'image/products';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
@@ -127,7 +127,8 @@ class ProductController extends Controller
     }
     public function all()
     {
+        $cartItems = \Cart::getContent();
         $products=Product::all();
-        return view('allProductsPages.allProducts',compact('products'));
+        return view('allProductsPages.allProducts',compact('products','cartItems'));
     }
 }

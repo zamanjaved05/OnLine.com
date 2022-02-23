@@ -62,13 +62,13 @@
                         <div class="row">
                             <div class=" hidden-xs">
                                 @if (File::exists(public_path("/image/products/".$item->attributes->image)))
-                                    <img src="{{ ('/image/products/'.$item->attributes->image) }}" style="width:120px" class="img-responsive" />
+                                    <img src="{{asset('image/products/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
                                 @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
-                                    <img src="{{ ('/image/cosmetic/'.$item->attributes->image) }}" style="width:120px" class="img-responsive"  />
+                                    <img src="{{asset('image/cosmetic/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
                                 @else
-                                    <img src="{{ ('/image/bags/'.$item->attributes->image) }}" style="width:120px" class="img-responsive" />
+                                    <img src="{{asset('image/bags/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
                                 @endif
 
