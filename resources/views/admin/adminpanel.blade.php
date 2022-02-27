@@ -165,6 +165,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{route('bags.index')}}" class="nav-link">
+                            <i class="nav-icon far fa-image"></i>
+                            <p>
+                                Bags
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{route('cosmatics.index')}}" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>
@@ -173,7 +181,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/kanban.html" class="nav-link">
+                        <a href="{{url('contacts')}}" class="nav-link">
                             <i class="nav-icon fas fa-columns"></i>
                             <p>
                                Contact

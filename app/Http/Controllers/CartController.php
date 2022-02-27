@@ -8,6 +8,7 @@ use App\Models\Cosmetic;
 use App\Models\Product;
 use App\Models\Product1;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Stripe\Charge;
 
 class CartController extends Controller
@@ -15,8 +16,8 @@ class CartController extends Controller
 
     public function layout($id)
     {
-        $bags=Bag::find($id);
-        return view('content.layout',compact('bags'));
+        $product = Product::find($id);
+        return view('layout.layout', compact('product'));
     }
     public function productList()
     {
@@ -33,16 +34,10 @@ class CartController extends Controller
     {
         $product=Product::all();
         $cosmetic=Cosmetic::all();
+        $product1=Product1::all();
         $cartItems = \Cart::getContent();
          //dd($cartItems);
-        return view('content.cart', compact('cartItems','cosmetic','product'));
-    }
-
-    public function wishList()
-    {
-        $cartItems = \Cart::getContent();
-        // dd($cartItems);
-        return view('content.wish', compact('cartItems'));
+        return view('content.cart', compact('cartItems','cosmetic','product','product1'));
     }
 
 
@@ -59,7 +54,7 @@ class CartController extends Controller
         ]);
         session()->flash('success', 'Product is Added to Cart Successfully !');
 
-        return redirect()->route('products.list');
+        return Redirect::back();
     }
 
     public function updateCart(Request $request)
@@ -107,7 +102,6 @@ class CartController extends Controller
     }
     public function checkoutstore(Request $request)
     {
-
         \Stripe\Stripe::setApiKey('sk_test_51J7ZcUEmlMSPD9MKO5Al77O8IjzkeydlIVGIwCQjNkucHogihaghHVsrwRAn8JmCREPrQhplXM55IXlKIPTPvmar005tEVublJ');
         $email=$request->email;
         //$stripeDescription = '';
@@ -147,9 +141,7 @@ class CartController extends Controller
 
 
 
-            $responce = \Stripe\Product::create(array(
-
-
+            $responce = \Stripe\Customer::create(array(
                 "name" => $cName,
                 "email" => $email,
                 "plan" => $stripePlanId,
@@ -169,6 +161,7 @@ class CartController extends Controller
 
             ]);
 
+
             $responce = [
                 'error' => false,
                 'data' => $responce,
@@ -184,8 +177,9 @@ class CartController extends Controller
             ];
         }
         // return $responce;
-        return redirect()->to('checkout');
+        return redirect()->to('cart');
     }
+
     public function productDetail($id)
     {
         $cartItems = \Cart::getContent();
@@ -208,6 +202,12 @@ class CartController extends Controller
         $cartItems = \Cart::getContent();
         $product = Bag::find($id);
         return view('detail_page.bags',compact('product','cartItems'));
+    }
+    public function products1_detail($id)
+    {
+        $cartItems = \Cart::getContent();
+        $product = Product1::find($id);
+        return view('detail_page.products1',compact('product','cartItems'));
     }
 
 }

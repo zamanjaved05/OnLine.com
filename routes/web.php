@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/clear', function() {
+
+    Artisan::call('cache:clear');
+    Artisan::call('route:cache');
+    Artisan::call('route:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+
+    return "Cleared!";
+
+});
+
 
 
 Route::middleware('auth')->group(function (){
@@ -59,16 +72,19 @@ Route::get('allProducts1', [\App\Http\Controllers\Product1Controller::class, 'al
 //front
 
 
-Route::get('about', function () {
-    return view('content.about');
-});
+//Route::get('about', function () {
+//    return view('content.about');
+//});
 
 //Route::get('checkout', function () {
 //    return view('content.checkout');
 //});
-Route::get('contactUS', function () {
-    return view('content.contact_us');
-});
+//Route::get('contactUS', function () {
+//    return view('content.contact_us');
+//});
+Route::get('about', [\App\Http\Controllers\ContactController::class,'about']);
+Route::get('contactUS', [\App\Http\Controllers\ContactController::class,'contactus']);
+Route::post('mail', [\App\Http\Controllers\ContactController::class,'mail'])->name('mail');
 
 
 //
@@ -88,6 +104,7 @@ Route::post('checkoutstore', [\App\Http\Controllers\CartController::class, 'chec
 Route::get('productDetail/{id}', [\App\Http\Controllers\CartController::class, 'productDetail'])->name('productDetail');
 Route::get('cosmetic_detail/{id}', [\App\Http\Controllers\CartController::class, 'cosmetic_detail'])->name('cosmetic_detail');
 Route::get('bag_detail/{id}', [\App\Http\Controllers\CartController::class, 'bag_detail'])->name('bag_detail');
+Route::get('products1_detail/{id}', [\App\Http\Controllers\CartController::class, 'products1_detail'])->name('products1_detail');
 //Route::get('checkout', [\App\Http\Controllers\CartController::class,'checkout']);
 
 

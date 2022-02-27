@@ -64,6 +64,9 @@
                                 @if (File::exists(public_path("/image/products/".$item->attributes->image)))
                                     <img src="{{asset('image/products/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
+                                @elseif(File::exists(public_path("/image/products1/".$item->attributes->image)))
+                                    <img src="{{asset('image/products1/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+
                                 @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
                                     <img src="{{asset('image/cosmetic/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
@@ -409,12 +412,12 @@
                         </label>
                     </p>
                     <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Proceed To Checkout" disabled="disabled">
-                    <div class="paymnet-img"><img src="assets/images/payment-img.jpg" alt="Payment"></div>
-                    <p><a href="#;">Checkout with Multiple Addresses</a></p>
+                    <div class="paymnet-img"><img src="{{asset('assets/images/payment-img.jpg')}}"></div>
+                    <p><a href="#">Checkout with Multiple Addresses</a></p>
                 </div>
 
             </div>
         </div>
     </div>
-    {{--    --}}
+    </div>{{--    --}}
 @endsection

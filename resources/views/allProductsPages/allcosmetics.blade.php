@@ -4,7 +4,13 @@
     <div class="grid-products">
         <div class="container-FLUID">
             <div class="row">
-                @foreach($cosmetics as $cosmetic)
+
+            @foreach($cosmetics as  $cosmetic)
+
+
+
+
+
                     <div class="col-6 col-sm-6 col-md-3 col-lg-3 item grid-view-item style2">
                         <div class="grid-view_image" style="width: 70%">
                             <!-- start product image -->
@@ -103,6 +109,7 @@
                             <!-- End product details -->
                         </div>
                     </div>
+
                 @endforeach
             </div>
             {{--   <div class="col-6 col-sm-6 col-md-4 col-lg-4 item grid-view-item style2">

@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\MyTestMail;
+use App\Models\Bag;
 use App\Models\Contact;
+use App\Models\Cosmetic;
 use App\Models\Product;
+use App\Models\Product1;
 use Illuminate\Http\Request;
-
+use Mail;
 class ContactController extends Controller
 {
     /**
@@ -125,5 +129,25 @@ class ContactController extends Controller
 
         return redirect()->route('contacts.index')
             ->with('success','Product deleted successfully');
+    }
+    public function about()
+    {
+        $cartItems = \Cart::getContent();
+        return view('content.about',compact('cartItems'));
+    }
+    public function contactus()
+    {
+        $cartItems = \Cart::getContent();
+        return view('content.contact_us',compact('cartItems'));
+    }
+    public function mail(Request $request)
+    {
+        $data = $request->all();
+        //  dd($data);
+        //to email is the receiver email
+        Mail::to('zamanjaved527@gmail.com')->send(new MyTestMail($data));
+
+        return back()->with('success', 'Thanks for contacting me, I will get back to you soon!');
+
     }
 }

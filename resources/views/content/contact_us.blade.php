@@ -13,9 +13,8 @@
     </div>
     <!--End Page Title-->
     <div class="map-section map">
-        <iframe src="https://www.google.com/maps/embed?pb=" height="350" allowfullscreen></iframe>
-        <div class="container">
-            <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13564.251239502177!2d74.2559611!3d31.7960381!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8fcf494ab12a1d65!2sSoftwareHouse%20inMuridke!5e0!3m2!1sen!2s!4v1645788938059!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>            <div class="row">
+{{--
                 <div class="map-section__overlay-wrapper">
                     <div class="map-section__overlay">
                         <h3 class="h4">Our store</h3>
@@ -23,13 +22,15 @@
                             <p>123 Fake St.<br>Toronto, Canada</p>
                             <p>Mon - Fri, 10am - 9pm<br>Saturday, 11am - 9pm<br>Sunday, 11am - 5pm</p>
                         </div>
-                        <p><a href="https://maps.google.com/?daddr=80%20Spadina%20Ave,%20Toronto" class="btn btn--secondary btn--small" target="_blank">Get directions</a></p>
+                        <p><a href="https://goo.gl/maps/8jncxXePdL6tu7rt8" class="btn btn--secondary btn--small" target="_blank">Get directions</a></p>
                     </div>
                 </div>
+--}}
             </div>
+
         </div>
     </div>
-    <div class="bredcrumbWrap">
+    <div class="bredcrumbWrap" onclick="funcion()">
         <div class="container breadcrumbs">
             <a href="index.html" title="Back to the home page">Home</a><span aria-hidden="true">›</span><span>Contact Us</span>
         </div>
@@ -41,7 +42,8 @@
                 <h2>Drop Us A Line</h2>
                 <p>Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500 </p>
                 <div class="formFeilds contact-form form-vertical">
-                    <form action="http://annimexweb.com/items/belle/assets/php/mail.php" method="post"  id="contact_form" class="contact-form">
+                    <form action="{{url('mail')}}" method="post"  id="contact_form" class="contact-form">
+                        @csrf
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                 <div class="form-group">

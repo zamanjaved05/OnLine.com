@@ -549,11 +549,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'mailhog',
-        'port' => '1025',
-        'encryption' => NULL,
-        'username' => NULL,
-        'password' => NULL,
+        'host' => 'smtp.gmail.com',
+        'port' => '587',
+        'encryption' => 'ssl',
+        'username' => 'zamanjaved527@gmail.com',
+        'password' => 'rozfqlvpyfjnjrds',
         'timeout' => NULL,
       ),
       'ses' => 
@@ -594,15 +594,15 @@
     ),
     'from' => 
     array (
-      'address' => NULL,
-      'name' => 'Laravel',
+      'address' => 'hello@example.com',
+      'name' => 'Example',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\resources\\views/vendor/mail',
+        0 => 'E:\\xampp8.1.2\\htdocs\\OnLine.com\\resources\\views/vendor/mails',
       ),
     ),
   ),

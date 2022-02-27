@@ -108,13 +108,13 @@ CodeMirror.defineMode("mbox", function() {
       return {
         // Is in a mbox separator
         inSeparator: false,
-        // Is in a mail header
+        // Is in a mails header
         inHeader: false,
         // If bracketed email is permitted. Only applicable when inHeader
         emailPermitted: false,
         // Name of current header
         header: null,
-        // Is in a region of mail headers
+        // Is in a region of mails headers
         inHeaders: false
       };
     },
