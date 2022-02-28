@@ -7,6 +7,7 @@ use App\Models\Cart;
 use App\Models\Cosmetic;
 use App\Models\Product;
 use App\Models\Product1;
+use App\Models\Shoes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Stripe\Charge;
@@ -21,13 +22,14 @@ class CartController extends Controller
     }
     public function productList()
     {
+        $shoes=Shoes::all();
         $cartItems = \Cart::getContent();
         $cosmetics=Cosmetic::all();
         $bags=Bag::all();
         $products = Product::all();
         $products1 = Product1::all();
         return view('content.products', compact('products',
-            'products1','cartItems','bags','cosmetics'));
+            'products1','cartItems','bags','cosmetics','shoes'));
     }
 
     public function cartList()
@@ -208,6 +210,12 @@ class CartController extends Controller
         $cartItems = \Cart::getContent();
         $product = Product1::find($id);
         return view('detail_page.products1',compact('product','cartItems'));
+    }
+    public function shoes_detail($id)
+    {
+        $cartItems = \Cart::getContent();
+        $shoes = Shoes::find($id);
+        return view('detail_page.shoes',compact('shoes','cartItems'));
     }
 
 }

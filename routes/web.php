@@ -30,7 +30,7 @@ Route::get('/clear', function() {
 
 Route::middleware('auth')->group(function (){
 
-});
+
 
 
 
@@ -105,6 +105,7 @@ Route::get('productDetail/{id}', [\App\Http\Controllers\CartController::class, '
 Route::get('cosmetic_detail/{id}', [\App\Http\Controllers\CartController::class, 'cosmetic_detail'])->name('cosmetic_detail');
 Route::get('bag_detail/{id}', [\App\Http\Controllers\CartController::class, 'bag_detail'])->name('bag_detail');
 Route::get('products1_detail/{id}', [\App\Http\Controllers\CartController::class, 'products1_detail'])->name('products1_detail');
+Route::get('shoes_detail/{id}', [\App\Http\Controllers\CartController::class, 'shoes_detail'])->name('shoes_detail');
 //Route::get('checkout', [\App\Http\Controllers\CartController::class,'checkout']);
 
 
@@ -112,3 +113,13 @@ Route::get('products1_detail/{id}', [\App\Http\Controllers\CartController::class
 //
 Route::get('/stripe', [\App\Http\Controllers\StripeController::class, 'index']);
 Route::post('/transaction', [\App\Http\Controllers\StripeController::class, 'makePayment'])->name('make-payment');
+//
+
+
+Route::get('shoes', [\App\Http\Controllers\ShoesController::class, 'index']);
+Route::post('/store', [\App\Http\Controllers\ShoesController::class, 'store'])->name('store');
+Route::get('/fetchall', [\App\Http\Controllers\ShoesController::class, 'fetchAll'])->name('fetchAll');
+Route::delete('/delete/', [\App\Http\Controllers\ShoesController::class, 'delete'])->name('delete');
+Route::get('/edit', [\App\Http\Controllers\ShoesController::class, 'edit'])->name('edit');
+Route::post('/update', [\App\Http\Controllers\ShoesController::class, 'update'])->name('update');
+});

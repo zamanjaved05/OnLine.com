@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NoName</title>
-    <link rel="icon" href="{{asset('logo/noname.png')}}" type="image/png">
+    <link rel="icon" href="<?php echo e(asset('logo/noname.png')); ?>" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="<?php echo e(asset('plugins/fontawesome-free/css/all.min.css')); ?>">
     <!-- Ionicons -->
-{{--    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">--}}
-{{--    <!-- Tempusdominus Bootstrap 4 -->--}}
-{{--    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">--}}
-{{--    <!-- iCheck -->--}}
-{{--    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">--}}
-{{--    <!-- JQVMap -->--}}
-{{--    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">--}}
+
+
+
+
+
+
+
 <!-- Theme style -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
-    <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="<?php echo e(asset('dist/css/adminlte.min.css')); ?>">
     <!-- overlayScrollbars -->
 <!--<link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">-->
     <!-- Daterange picker -->
@@ -37,9 +37,9 @@
 <div class="wrapper">
 
     <!-- Preloader -->
-{{--    <div class="preloader flex-column justify-content-center align-items-center">--}}
-{{--        <img class="animation__shake" src="download.png" alt="AdminLTELogo" height="500" width="700">--}}
-{{--    </div>--}}
+
+
+
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -87,8 +87,8 @@
             </li>
             <li class="nav-item">
 
-                    <form action="{{ route('logout') }}" method="post">
-                        @csrf
+                    <form action="<?php echo e(route('logout')); ?>" method="post">
+                        <?php echo csrf_field(); ?>
                         <button class="btn btn-secondary" type="submit">Logout</button>
                     </form>
             </li>
@@ -101,7 +101,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link pt-2.5" style="">
-            <img src="{{asset('logo/noname.png')}}" alt="AdminLTE Logo"
+            <img src="<?php echo e(asset('logo/noname.png')); ?>" alt="AdminLTE Logo"
                  class="brand-image img-circle elevation-3" style="opacity: .5">
             <span class="brand-text font-weight-light">NoName</span>
         </a>
@@ -111,7 +111,7 @@
             <!-- Sidebar layout panel (optional) -->
             <div class="user-panel mt-3 pt-2 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="{{asset('logo/noname.png')}}" class="img-circle elevation-2" alt="User Image" style="height: 43px
+                    <img src="<?php echo e(asset('logo/noname.png')); ?>" class="img-circle elevation-2" alt="User Image" style="height: 43px
                         ;width: 40px">
                 </div>
                 <div class="info">
@@ -137,7 +137,7 @@
             <nav class="mt-2" style="">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item">
-                        <a href="{{url('dashboard')}}" class="nav-link">
+                        <a href="<?php echo e(url('dashboard')); ?>" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>
                                 dashboard
@@ -145,7 +145,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('products.index')}}" class="nav-link">
+                        <a href="<?php echo e(route('products.index')); ?>" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>
                                 Products
@@ -153,7 +153,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('products1.index')}}" class="nav-link">
+                        <a href="<?php echo e(route('products1.index')); ?>" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>
                                 Products1
@@ -161,7 +161,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('bags.index')}}" class="nav-link">
+                        <a href="<?php echo e(route('bags.index')); ?>" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>
                                 Bags
@@ -169,7 +169,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('cosmatics.index')}}" class="nav-link">
+                        <a href="<?php echo e(route('cosmatics.index')); ?>" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>
                                 Cosmetics
@@ -177,7 +177,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url('contacts')}}" class="nav-link">
+                        <a href="<?php echo e(url('contacts')); ?>" class="nav-link">
                             <i class="nav-icon fas fa-columns"></i>
                             <p>
                                Contact
@@ -205,7 +205,7 @@
     <div class="content-wrapper">
         <!-- Main content -->
         <div class="container m-12">
-            @yield('content')
+            <?php echo $__env->yieldContent('content'); ?>
         </div>
 
     <!-- /.content -->
@@ -229,15 +229,15 @@
 
 
 <!-- jQuery -->
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="<?php echo e(asset('plugins/jquery/jquery.min.js')); ?>"></script>
 <!-- jQuery UI 1.11.4 -->
 <!--
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 -->
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-{{--<script>--}}
-{{--    $.widget.bridge('uibutton', $.ui.button)--}}
-{{--</script>--}}
+
+
+
 <!-- Bootstrap 4 -->
 <!--
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -261,19 +261,19 @@
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 -->
 <!-- AdminLTE App -->
-<script src="{{asset('dist/js/adminlte.js')}}"></script>
+<script src="<?php echo e(asset('dist/js/adminlte.js')); ?>"></script>
 <!-- AdminLTE for demo purposes -->
-{{--<script src="dist/js/demo.js"></script>--}}
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-{{--<script src="dist/js/pages/dashboard.js"></script>--}}
 
-{{--<script src="https://code.jquery.com/jquery-3.5.1.js"></script>--}}
-{{--<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>--}}
-{{--<script>--}}
-{{--    $(document).ready(function() {--}}
-{{--        $('.example').DataTable();--}}
-{{--    } );--}}
-{{--</script>--}}
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+
+
+
+
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
@@ -290,3 +290,4 @@
 </script>
 </body>
 </html>
+<?php /**PATH E:\xampp8.1.2\htdocs\OnLine.com\resources\views/admin/adminpanel.blade.php ENDPATH**/ ?>

@@ -55,6 +55,8 @@
                                                     @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
                                                         <img src="{{asset('image/cosmetic/'.$item->attributes->image)}}"
                                                              style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                    @elseif(File::exists(public_path("storage/images/".$item->attributes->image)))
+                                                        <img src="{{asset('storage/images/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
                                                     @else
                                                         <img src="{{asset('image/bags/'.$item->attributes->image)}}"
