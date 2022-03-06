@@ -15,10 +15,9 @@ use Stripe\Charge;
 class CartController extends Controller
 {
 
-    public function layout($id)
+    public function layout()
     {
-        $product = Product::find($id);
-        return view('layout.layout', compact('product'));
+        return view('layout.layout');
     }
     public function productList()
     {
@@ -34,12 +33,10 @@ class CartController extends Controller
 
     public function cartList()
     {
-        $product=Product::all();
-        $cosmetic=Cosmetic::all();
-        $product1=Product1::all();
+
         $cartItems = \Cart::getContent();
          //dd($cartItems);
-        return view('content.cart', compact('cartItems','cosmetic','product','product1'));
+        return view('content.cart', compact('cartItems'));
     }
 
 
@@ -142,12 +139,12 @@ class CartController extends Controller
             ));
 
 
-
+            $stripeDescription =$request->description;
             $responce = \Stripe\Customer::create(array(
                 "name" => $cName,
                 "email" => $email,
                 "plan" => $stripePlanId,
-                //"description" => $stripeDescription,
+                "description" => $stripeDescription,
                 // "metadata" => $metadata,
                 "source" => $token
             ));
@@ -158,7 +155,7 @@ class CartController extends Controller
                 'amount' => $request->totalamount*100,
                 'currency' => 'usd',
                 'customer' => $stripeCustomerId,
-                "description" => 'Real-time Shipping Quotes (SBS) Charge',
+                "description" => $stripeDescription,
                 'source' => $default_source,
 
             ]);

@@ -46,21 +46,27 @@
                                                 <td style="width: 20%">
                                                     @if (File::exists(public_path("/image/products/".$item->attributes->image)))
                                                         <img src="{{asset('image/products/'.$item->attributes->image)}}"
-                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress"
+                                                             title=""/>
 
                                                     @elseif(File::exists(public_path("/image/products1/".$item->attributes->image)))
-                                                        <img src="{{asset('image/products1/'.$item->attributes->image)}}"
-                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                        <img
+                                                            src="{{asset('image/products1/'.$item->attributes->image)}}"
+                                                            style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
 
                                                     @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
                                                         <img src="{{asset('image/cosmetic/'.$item->attributes->image)}}"
-                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress"
+                                                             title=""/>
                                                     @elseif(File::exists(public_path("storage/images/".$item->attributes->image)))
-                                                        <img src="{{asset('storage/images/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                                        <img src="{{asset('storage/images/'.$item->attributes->image)}}"
+                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress"
+                                                             title=""/>
 
                                                     @else
                                                         <img src="{{asset('image/bags/'.$item->attributes->image)}}"
-                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress"
+                                                             title=""/>
 
                                                     @endif
 
@@ -74,7 +80,9 @@
                                         <tfoot class="font-weight-600">
                                         <tr>
                                             <td colspan="4" class="text-right">Total</td>
-                                            <td><mark>${{ Cart::getTotal() }}</mark></td>
+                                            <td>
+                                                <mark>${{ Cart::getTotal() }}</mark>
+                                            </td>
                                         </tr>
                                         </tfoot>
                                     </table>
@@ -87,95 +95,108 @@
                         </div>
                     </div>
                     <div class="col-lg-8">
-                            <h1 class="mb-3 mt-2 text-center" style="font-size: 20px">Billing address</h1>
-                            <form class="needs-validation" action="{{url('checkoutstore')}}" method="post" novalidate>
-                                @csrf
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName">Name:</label>
-                                        <input type="text" class="form-control" id="fname" name="name" placeholder="name"
-                                               value="">
-
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName">Email:</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="email"
-                                               value="">
-
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName">address:</label>
-                                        <input type="text" class="form-control" id="adr" name="address" placeholder=""
-                                               value="">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName">City:</label>
-                                        <input type="text" class="form-control" id="city" name="city" placeholder=""
-                                               value="">
-
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName">State:</label>
-                                        <input type="text" class="form-control" id="state" name="state" placeholder=""
-                                               value="">
-
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName">Zip:</label>
-                                        <input type="text" class="form-control" id="zip" name="zip" placeholder="" value="">
-
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName">Phone:</label>
-                                        <input type="text" class="form-control" id="cname" name="phone" placeholder=""
-                                               value="">
-
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName">CardNumber:</label>
-                                        <input type="number" class="form-control" id="ccnum" name="cnumber"
-                                               size="10" placeholder="" value=""/>
-
-                                    </div>
+                        <h1 class="mb-3 mt-2 text-center" style="font-size: 20px">Billing address</h1>
+                        <form class="needs-validation" action="{{url('checkoutstore')}}" method="post" novalidate>
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">Name:</label>
+                                    <input type="text" class="form-control" id="fname" name="name" placeholder="name"
+                                           value="">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-3 mb-3">
-                                        <label for="cc-expiration">Exp Month:</label>
-                                        <input type="text" class="form-control" id="expmonth" name="ExpiryMonth"
-                                               placeholder="">
 
-                                    </div>
-                                    <div class="col-md-3 mb-3">
-                                        <label for="cc-cvv">Exp Year:</label>
-                                        <input type="text" class="form-control" id="expyear" name="ExpiryYear"
-                                               placeholder="">
-
-                                    </div>
-                                    <div class="col-md-3 mb-3">
-                                        <label for="cc-cvv">CVV</label>
-                                        <input type="text" class="form-control" id="cvc" name="cvc" placeholder="">
-
-                                    </div>
-                                    <div class="col-md-3 mb-3" hidden>
-                                        <label for="cc-cvv">TotalPrice</label>
-                                        <input type="text" class="form-control" value="{{ Cart::getTotal() }}" id="cvc"
-                                               name="totalamount" placeholder="">
-
-                                    </div>
+                                <div class="col-md-6 mb-3" hidden>
+                                    <label for="firstName">stripeDescription:</label>
+                                    <input type="text" class="form-control" id="description" name="description"
+                                           placeholder="stripeDescription"
+                                           value="@foreach ($cartItems as $item)
+                                        | Name: {{$item->name}} | Price: {{$item->price }} | Quantity: {{$item->quantity}} @endforeach">
 
                                 </div>
-                                <hr class="mb-4">
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout
-                                </button>
-                            </form>
-                        </div>
+
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                           placeholder="email"
+                                           value="">
+
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">address:</label>
+                                    <input type="text" class="form-control" id="adr" name="address" placeholder=""
+                                           value="">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">City:</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder=""
+                                           value="">
+
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">State:</label>
+                                    <input type="text" class="form-control" id="state" name="state" placeholder=""
+                                           value="">
+
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Zip:</label>
+                                    <input type="text" class="form-control" id="zip" name="zip" placeholder=""
+                                           value="">
+
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">Phone:</label>
+                                    <input type="text" class="form-control" id="cname" name="phone" placeholder=""
+                                           value="">
+
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">CardNumber:</label>
+                                    <input type="number" class="form-control" id="ccnum" name="cnumber"
+                                           size="10" placeholder="" value=""/>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="cc-expiration">Exp Month:</label>
+                                    <input type="text" class="form-control" id="expmonth" name="ExpiryMonth"
+                                           placeholder="">
+
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="cc-cvv">Exp Year:</label>
+                                    <input type="text" class="form-control" id="expyear" name="ExpiryYear"
+                                           placeholder="">
+
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="cc-cvv">CVV</label>
+                                    <input type="text" class="form-control" id="cvc" name="cvc" placeholder="">
+
+                                </div>
+                                <div class="col-md-3 mb-3" hidden>
+                                    <label for="cc-cvv">TotalPrice</label>
+                                    <input type="text" class="form-control" value="{{ Cart::getTotal() }}" id="cvc"
+                                           name="totalamount" placeholder="">
+
+                                </div>
+
+                            </div>
+                            <hr class="mb-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout
+                            </button>
                     </div>
+                    </form>
                 </div>
-
-
             </div>
-
         </div>
+
+
+    </div>
+
+    </div>
 
     <br><br>
 

@@ -177,6 +177,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{url('shoes')}}" class="nav-link">
+                            <i class="nav-icon far fa-image"></i>
+                            <p>
+                                Shoes
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{url('contacts')}}" class="nav-link">
                             <i class="nav-icon fas fa-columns"></i>
                             <p>

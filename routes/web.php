@@ -30,7 +30,7 @@ Route::get('/clear', function() {
 
 Route::middleware('auth')->group(function (){
 
-
+});
 
 
 
@@ -90,7 +90,7 @@ Route::post('mail', [\App\Http\Controllers\ContactController::class,'mail'])->na
 //
 
 //cart
-Route::get('layout/{id}', [\App\Http\Controllers\CartController::class, 'layout'])->name('layout');
+Route::get('layout/', [\App\Http\Controllers\CartController::class, 'layout'])->name('layout');
 Route::get('/', [\App\Http\Controllers\CartController::class, 'productList'])->name('products.list');
 Route::get('cart', [\App\Http\Controllers\CartController::class, 'cartList'])->name('cart.list');
 Route::post('cart', [\App\Http\Controllers\CartController::class, 'addToCart'])->name('cart.store');
@@ -122,4 +122,4 @@ Route::get('/fetchall', [\App\Http\Controllers\ShoesController::class, 'fetchAll
 Route::delete('/delete/', [\App\Http\Controllers\ShoesController::class, 'delete'])->name('delete');
 Route::get('/edit', [\App\Http\Controllers\ShoesController::class, 'edit'])->name('edit');
 Route::post('/update', [\App\Http\Controllers\ShoesController::class, 'update'])->name('update');
-});
+

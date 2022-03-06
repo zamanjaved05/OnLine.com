@@ -11,7 +11,8 @@ class ShoesController extends Controller
 
     // set index page view
     public function index() {
-        return view('admin.shoes.shoes');
+        $cartItems = \Cart::getContent();
+        return view('admin.shoes.shoes',compact('cartItems'));
     }
 
     // handle fetch all eamployees ajax request

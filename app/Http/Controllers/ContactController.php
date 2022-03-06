@@ -51,11 +51,11 @@ class ContactController extends Controller
 
         $input = $request->all();
 
-        if ($image = $request->file('images')) {
-            $destinationPath = 'images/';
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/contact';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
-            $input['images'] = "$profileImage";
+            $input['image'] = "$profileImage";
         }
 
         Product::create($input);
@@ -102,13 +102,13 @@ class ContactController extends Controller
 
         $input = $request->all();
 
-        if ($image = $request->file('images')) {
-            $destinationPath = 'images/';
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/contacts';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['images'] = "$profileImage";
         }else{
-            unset($input['images']);
+            unset($input['image']);
         }
 
         $product->update($input);

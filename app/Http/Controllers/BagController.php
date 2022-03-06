@@ -47,11 +47,11 @@ class BagController extends Controller
 
         $input = $request->all();
 
-        if ($image = $request->file('images')) {
-            $destinationPath = 'images/bags';
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/bags';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
-            $input['images'] = "$profileImage";
+            $input['image'] = "$profileImage";
         }
 
         Bag::create($input);
@@ -103,13 +103,13 @@ class BagController extends Controller
 
         $input = $request->all();
 
-        if ($image = $request->file('images')) {
-            $destinationPath = 'images/bags';
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/bags';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['images'] = "$profileImage";
         }else{
-            unset($input['images']);
+            unset($input['image']);
         }
 
         $bag->update($input);
