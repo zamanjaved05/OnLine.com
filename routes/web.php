@@ -123,3 +123,11 @@ Route::delete('/delete/', [\App\Http\Controllers\ShoesController::class, 'delete
 Route::get('/edit', [\App\Http\Controllers\ShoesController::class, 'edit'])->name('edit');
 Route::post('/update', [\App\Http\Controllers\ShoesController::class, 'update'])->name('update');
 
+//
+
+Route::resource('shirts',\App\Http\Controllers\ShirtController::class);
+//Route::get('edit',[\App\Http\Controllers\ShirtController::class,'create']);
+//Route::get('product_detail/{id}',[\App\Http\Controllers\ShirtController::class,'show']);
+    //Route::get('dell/{id}',[\App\Http\Controllers\ShirtController::class,'destroy'])->name('dell');
+Route::get('product_edit/{id}',[\App\Http\Controllers\ShirtController::class,'edit'])->name('product_edit');
+Route::post('update_product/{id}',[\App\Http\Controllers\ShirtController::class,'update'])->name('product_update');
