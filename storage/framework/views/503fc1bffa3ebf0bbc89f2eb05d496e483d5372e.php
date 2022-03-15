@@ -472,7 +472,8 @@
                                                 style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
 
                                        <?php elseif(File::exists(public_path("storage/images/".$item->attributes->image))): ?>
-                                           <img src="<?php echo e(asset('storage/images/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                           <img src="<?php echo e(asset('storage/images/'.$item->attributes->image)); ?>"
+                                                style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
 
                                        <?php else: ?>
                                            <img src="<?php echo e(('/image/bags/'.$item->attributes->image)); ?>"
@@ -1058,6 +1059,51 @@
     <!--End Scoll Top-->
 
     <!--Quick View popup-->
+    <div class="modal fade quick-view-popup" id="content_quickview">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="ProductSection-product-template" class="product-template__container prstyle1">
+                        <div class="product-single">
+                            <form action="" id="productModal" method="post" enctype="multipart/form-data">
+                            <?php echo csrf_field(); ?>
+
+                            <!-- Start model close -->
+                                <a href="javascript:void(0)" data-dismiss="modal" class="model-close-btn pull-right"
+                                   title="close"><span class="icon icon anm anm-times-l"></span></a>
+                                <!-- End model close -->
+                                
+                                <div class="mt-2" id="image">
+                                </div>
+                                <!--End-product-single-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function modaldetail(dgdfgdfh) {
+
+            $('#productModal').attr('action', "<?php echo e(url('update_product')); ?>/" + dgdfgdfh);
+            $.ajax({
+                url: "productModal/" + dgdfgdfh,
+                type: 'GET',
+                success: function (res) {
+                    console.log(res);
+                    $('#name').val(res.name);
+                    $('#price').val(res.price);
+                    $('#description').val(res.description);
+                    $("#image").html(
+                        `<img src="image/products/${res.image}" style="width:120%" alt="3/4 Sleeve Kimono Dress" title=""/>`);
+
+                }
+            });
+        }
+
+
+    </script>
 
 
 

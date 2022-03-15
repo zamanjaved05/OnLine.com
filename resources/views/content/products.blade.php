@@ -419,7 +419,7 @@
                                                 {{--                                            <form class="variants add" action="#" onclick="window.location.href='cart.html'" method="post">--}}
                                                 {{--                                            </form>--}}
                                                 <div class="button-set">
-                                                    <a href="javascript:void(0)" title="Quick View"
+                                                    <a href="javascript:void(0)" onclick="modaldetail({{$product->id}})" title="Quick View"
                                                        class="quick-view-popup quick-view" data-toggle="modal"
                                                        data-target="#content_quickview">
                                                         <i class="icon anm anm-search-plus-r"></i>
@@ -727,6 +727,11 @@
                                             class="collection-grid-item__title btn btn--secondary no-border">
                                             <i class="icon anm anm-bag-l p-1" style="float: left;"></i></h3>
                                     </button>
+                                    <a href="javascript:void(0)" onclick="modaldetail({{$cosmetic->id}})" title="Quick View"
+                                       class="quick-view-popup quick-view" data-toggle="modal"
+                                       data-target="#content_quickview">
+                                        <i class="icon anm anm-search-plus-r"></i>
+                                    </a>
                                 </form>
                                 <p style="font-size: 20px">${{$cosmetic->price}}</p>
 

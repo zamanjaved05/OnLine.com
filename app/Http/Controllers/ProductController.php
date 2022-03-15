@@ -125,6 +125,12 @@ class ProductController extends Controller
         return redirect()->route('products.index')
             ->with('success','Product deleted successfully');
     }
+
+    public function modal($id)
+    {
+        $product=Product::find($id);
+        return $product->toArray();
+    }
     public function all()
     {
         $cartItems = \Cart::getContent();

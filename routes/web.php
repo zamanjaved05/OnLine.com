@@ -52,6 +52,8 @@ Route::get('home',[\App\Http\Controllers\HomeController::class,'index']);
 
 
 Route::resource('products', \App\Http\Controllers\ProductController::class);
+Route::get('productModal/{id}',[\App\Http\Controllers\ProductController::class,'modal'])->name('productModal');
+
 Route::resource('contacts', \App\Http\Controllers\ContactController::class);
 //
 Route::resource('cosmatics', \App\Http\Controllers\CosmeticController::class);
