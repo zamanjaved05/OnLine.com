@@ -67,14 +67,14 @@
                                 @elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image)))
                                     <img src="{{asset('image/products1/image/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
-                                @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
-                                    <img src="{{asset('image/cosmetic/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                @elseif(File::exists(public_path("/image/cosmetics/image/".$item->attributes->image)))
+                                    <img src="{{asset('image/cosmetics/image/'.$item->attributes->image)}}" style="width:120px" alt="NoName image" title="" />
 
                                 @elseif(File::exists(public_path("/storage/images/shoes/image/".$item->attributes->image)))
-                                    <img src="{{asset('/storage/images/shoes/image/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                    <img src="{{asset('/storage/images/shoes/image/'.$item->attributes->image)}}" style="width:120px" alt="NoName image" title="" />
 
                                 @else
-                                    <img src="{{asset('image/bags/image/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                    <img src="{{asset('image/bags/image/'.$item->attributes->image)}}" style="width:120px" alt="NoName image" title="" />
 
                                 @endif
 

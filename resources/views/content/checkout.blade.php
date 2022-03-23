@@ -46,26 +46,30 @@
                                                 <td style="width: 20%">
                                                     @if (File::exists(public_path("/image/products/".$item->attributes->image)))
                                                         <img src="{{asset('image/products/'.$item->attributes->image)}}"
-                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress"
+                                                             style="width:120px" alt="NoName image"
                                                              title=""/>
 
                                                     @elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image)))
-                                                        <img src="{{asset('image/products1/image/'.$item->attributes->image)}}"
-                                                            style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                        <img
+                                                            src="{{asset('image/products1/image/'.$item->attributes->image)}}"
+                                                            style="width:120px" alt="NoName image" title=""/>
 
-                                                    @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
-                                                        <img src="{{asset('image/cosmetic/'.$item->attributes->image)}}"
-                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress"
-                                                             title=""/>
+                                                    @elseif(File::exists(public_path("/image/cosmetics/image/".$item->attributes->image)))
+                                                        <img
+                                                            src="{{asset('image/cosmetics/image/'.$item->attributes->image)}}"
+                                                            style="width:120px" alt="NoName image"
+                                                            title=""/>
                                                     @elseif(File::exists(public_path("/storage/images/shoes/image/".$item->attributes->image)))
-                                                        <img src="{{asset('/storage/images/shoes/image/'.$item->attributes->image)}}"
-                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress"
-                                                             title=""/>
+                                                        <img
+                                                            src="{{asset('/storage/images/shoes/image/'.$item->attributes->image)}}"
+                                                            style="width:120px" alt="NoName image"
+                                                            title=""/>
 
                                                     @else
-                                                        <img src="{{asset('image/bags/image/'.$item->attributes->image)}}"
-                                                             style="width:120px" alt="3/4 Sleeve Kimono Dress"
-                                                             title=""/>
+                                                        <img
+                                                            src="{{asset('image/bags/image/'.$item->attributes->image)}}"
+                                                            style="width:120px" alt="NoName image"
+                                                            title=""/>
 
                                                     @endif
 
@@ -104,11 +108,11 @@
                                            value="">
                                 </div>
 
-                                <div class="col-md-6 mb-3"hidden >
+                                <div class="col-md-6 mb-3" hidden>
                                     <label for="firstName">stripeDescription:</label>
                                     <input type="text" class="form-control" id="description" name="description"
                                            placeholder="stripeDescription"
-                                           value="@foreach ($cartItems as $item)|Name:{{$item->name}}|Price: {{$item->price }}|Quantity:{{$item->quantity}}@endforeach">
+                                           value="@foreach ($cartItems as $item) | Name: {{$item->name}} | Price: {{$item->price }} | Quantity: {{$item->quantity.' ..'}}  @endforeach">
 
                                 </div>
 
@@ -185,17 +189,14 @@
                             <hr class="mb-4">
                             <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout
                             </button>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
 
 
     </div>
-
-    </div>
-
     <br><br>
 
 

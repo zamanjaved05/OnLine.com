@@ -387,8 +387,8 @@
 
                     <div class="collection-grid-item ">
                         <a href="<?php echo e(url("cosmetic_detail/$cosmetic->id")); ?>" class="collection-grid-item__link m-1">
-                            <img class="blur-up lazyload" data-src="<?php echo e(asset('image/cosmetic/'.$cosmetic->image)); ?>"
-                                 src="<?php echo e(asset('image/cosmetic/'.$cosmetic->image)); ?>" alt="Cosmetic"/>
+                            <img class="blur-up lazyload" data-src="<?php echo e(asset('image/cosmetics/image/'.$cosmetic->image)); ?>"
+                                 src="<?php echo e(asset('image/cosmetic/image/'.$cosmetic->image)); ?>" alt="Cosmetic"/>
                             <div class="collection-grid-item__title-wrapper">
 
                                 <form class="add-to-cart" action="<?php echo e(route('cart.store')); ?>" method="POST"

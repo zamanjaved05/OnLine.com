@@ -72,6 +72,22 @@ class CartController extends Controller
 
         return redirect()->route('cart.list');
     }
+    public function updateCartt(Request $request)
+    {
+        \Cart::update(
+            $request->id,
+            [
+                'quantity' => [
+                    'relative' => false,
+                    'value' => $request->quantity
+                ],
+            ]
+        );
+
+        session()->flash('success', 'Item Cart is Updated Successfully !');
+
+        return redirect()->back();
+    }
 
     public function removeCart(Request $request)
     {

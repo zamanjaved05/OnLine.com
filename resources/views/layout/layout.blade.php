@@ -461,27 +461,27 @@
                                    <span class="product-image">
                                        @if (File::exists(public_path("/image/products/".$item->attributes->image)))
                                            <img src="{{ ('/image/products/'.$item->attributes->image) }}"
-                                                style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                style="width:100px" alt="NoName image" title=""/>
 
-                                       @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
-                                           <img src="{{ ('/image/cosmetic/'.$item->attributes->image) }}"
-                                                style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                       @elseif(File::exists(public_path("/image/cosmetics/image/".$item->attributes->image)))
+                                           <img src="{{ ('/image/cosmetics/image/'.$item->attributes->image) }}"
+                                                style="width:100px" alt="NoName image" title=""/>
 
                                        @elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image)))
                                            <img src="{{ ('/image/products1/image/'.$item->attributes->image) }}"
-                                                style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                style="width:100px" alt="NoName image" title=""/>
 
                                        @elseif(File::exists(public_path("/storage/images/shoes/image/".$item->attributes->image)))
                                            <img src="{{ ('/storage/images/shoes/image/'.$item->attributes->image) }}"
-                                                style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                style="width:100px" alt="NoName image" title=""/>
 
                                        @elseif(File::exists(public_path("storage/images/".$item->attributes->image)))
                                            <img src="{{asset('storage/images/'.$item->attributes->image)}}"
-                                                style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                style="width:120px" alt="NoName image" title=""/>
 
                                        @else
                                            <img src="{{ ('/image/bags/image/'.$item->attributes->image) }}"
-                                                style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                style="width:100px" alt="NoName image" title=""/>
 
                                        @endif
 
@@ -503,7 +503,7 @@
                                             <div class="wrapQtyBtn">
                                                 <div class="qtyField">
                                                     <span class="label">Qty:</span>
-                                                    <form action="{{ route('cart.update') }}" method="POST">
+                                                    <form action="{{ route('cart.updatee') }}" method="POST">
                                                         @csrf
                                                         <input type="hidden" name="id" value="{{ $item->id}}">
                                                         <input type="number" name="quantity"
@@ -1106,13 +1106,13 @@
                                     <li class="item">
                                         <a class="product-images" href="#">
                                             @if (File::exists(public_path("/image/products/".$item->attributes->images)))
-                                                <img src="{{ ('/image/products/'.$item->attributes->images) }}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                                <img src="{{ ('/image/products/'.$item->attributes->images) }}" style="width:120px" alt="NoName image" title="" />
 
                                             @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->images)))
-                                                <img src="{{ ('/image/cosmetic/'.$item->attributes->images) }}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                                <img src="{{ ('/image/cosmetic/'.$item->attributes->images) }}" style="width:120px" alt="NoName image" title="" />
 
                                             @else
-                                                <img src="{{ ('/image/bags/'.$item->attributes->images) }}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                                <img src="{{ ('/image/bags/'.$item->attributes->images) }}" style="width:120px" alt="NoName image" title="" />
 
                                             @endif
 
@@ -1533,19 +1533,19 @@
                                             <div class="pl-20">
                                                 @if (File::exists(public_path("/image/products/".$item->attributes->image)))
                                                     <img src="{{asset('image/products/'.$item->attributes->image)}}"
-                                                         style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                         style="width:120px" alt="NoName image" title=""/>
 
                                                 @elseif(File::exists(public_path("/image/products1/".$item->attributes->image)))
                                                     <img src="{{asset('image/products1/'.$item->attributes->image)}}"
-                                                         style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                         style="width:120px" alt="NoName image" title=""/>
 
                                                 @elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image)))
                                                     <img src="{{asset('image/cosmetic/'.$item->attributes->image)}}"
-                                                         style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                         style="width:120px" alt="NoName image" title=""/>
 
                                                 @else
                                                     <img src="{{asset('image/bags/'.$item->attributes->image)}}"
-                                                         style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
+                                                         style="width:120px" alt="NoName image" title=""/>
 
                                                 @endif
                                             </div>
@@ -1708,7 +1708,7 @@
                     $('#price').val(res.price);
                     $('#description').val(res.description);
                     $("#image").html(
-                        `<img src="image/products/${res.image}" style="width:120%" alt="3/4 Sleeve Kimono Dress" title=""/>`);
+                        `<img src="image/products/${res.image}" style="width:120%" alt="" title=""/>`);
 
                 }
             });

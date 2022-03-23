@@ -12,6 +12,7 @@ class Cosmetic extends Model
         'name',
         'price',
         'image',
+        'image1',
         'description',
     ];
 }

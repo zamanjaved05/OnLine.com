@@ -50,10 +50,17 @@ class CosmeticController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/cosmetic';
+            $destinationPath = 'image/cosmetics/image';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
+        }
+
+        if ($image = $request->file('image1')) {
+            $destinationPath = 'image/cosmetics/image1';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image1'] = "$profileImage";
         }
 
         Cosmetic::create($input);

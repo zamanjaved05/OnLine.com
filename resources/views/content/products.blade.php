@@ -711,8 +711,8 @@
 
                     <div class="collection-grid-item ">
                         <a href="{{url("cosmetic_detail/$cosmetic->id") }}" class="collection-grid-item__link m-1">
-                            <img class="blur-up lazyload" data-src="{{asset('image/cosmetic/'.$cosmetic->image)}}"
-                                 src="{{asset('image/cosmetic/'.$cosmetic->image)}}" alt="Cosmetic"/>
+                            <img class="blur-up lazyload" data-src="{{asset('image/cosmetics/image/'.$cosmetic->image)}}"
+                                 src="{{asset('image/cosmetic/image/'.$cosmetic->image)}}" alt="Cosmetic"/>
                             <div class="collection-grid-item__title-wrapper">
 
                                 <form class="add-to-cart" action="{{ route('cart.store') }}" method="POST"
