@@ -53,6 +53,13 @@ class ProductController extends Controller
             $input['image'] = "$profileImage";
         }
 
+        if ($image = $request->file('image1')) {
+            $destinationPath = 'image/products/image1';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image1'] = "$profileImage";
+        }
+
         Product::create($input);
 
         return redirect()->route('products.index')

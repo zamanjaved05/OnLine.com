@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cosmetics', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(10000);
             $table->string('name');
             $table->double('price');
             $table->text('description');

@@ -58,6 +58,12 @@
                                 <input type="file" name="image" class="form-control" placeholder="image">
                             </div>
                         </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Image1:</strong>
+                                <input type="file" name="image1" class="form-control" placeholder="image1">
+                            </div>
+                        </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>

@@ -14,11 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('bags', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(30000);
             $table->string('name');
             $table->double('price');
             $table->text('description');
             $table->string('image');
+            $table->string('image1');
             $table->timestamps();
         });
     }

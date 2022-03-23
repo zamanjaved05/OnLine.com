@@ -48,10 +48,17 @@ class BagController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/bags';
+            $destinationPath = 'image/bags/image';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
+        }
+
+        if ($image = $request->file('image1')) {
+            $destinationPath = 'image/bags/image1';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image1'] = "$profileImage";
         }
 
         Bag::create($input);

@@ -5,7 +5,7 @@
  
 
     <!--Home slider-->
-    <div class="slideshow slideshow-wrapper pb-section sliderFull">
+    <div class="slideshow slideshow-wrapper pb-section sliderFull -mt-16">
         <div class="home-slideshow">
             <div class="slide">
                 <div class="blur-up lazyload bg-size">
@@ -84,8 +84,8 @@
                                                     <!-- End image -->
                                                     <!-- Hover image -->
                                                     <img class="hover blur-up lazyload"
-                                                         data-src="<?php echo e(asset('image/products/'.$product->image)); ?>"
-                                                         style="" src="<?php echo e(asset('image/products/'.$product->image)); ?>"
+                                                         data-src="<?php echo e(asset('image/products/image1/'.$product->image)); ?>"
+                                                         style="" src="<?php echo e(asset('image/products/image1/'.$product->image)); ?>"
                                                          alt="image"
                                                          title="product">
                                                     <!-- End hover image -->
@@ -166,7 +166,7 @@
                                                             alt="image"/>
                                                     </li>
                                                     <li class="swatch medium rounded"><img
-                                                            src="<?php echo e(asset('image/products/'.$product->image)); ?>"
+                                                            src="<?php echo e(asset('image/products/image1/'.$product->image)); ?>"
                                                             alt="image"/>
                                                     </li>
                                                     <li class="swatch medium rounded"><img
@@ -194,14 +194,14 @@
                                             <a href="<?php echo e(url("shoes_detail/$shoe->id")); ?>">
                                                 <!-- image -->
                                                 <img class="primary blur-up lazyload"
-                                                     data-src="<?php echo e(asset('storage/images/'.$shoe->image)); ?>"
-                                                     src="<?php echo e(asset('storage/images/'.$shoe->image)); ?>" alt="image"
+                                                     data-src="<?php echo e(asset('storage/images/shoes/image/'.$shoe->image)); ?>"
+                                                     src="<?php echo e(asset('storage/images/shoes/image/'.$shoe->image)); ?>" alt="image"
                                                      title="product">
                                                 <!-- End image -->
                                                 <!-- Hover image -->
                                                 <img class="hover blur-up lazyload"
-                                                     data-src="<?php echo e(asset('storage/images/'.$shoe->image)); ?>"
-                                                     src="<?php echo e(asset('storage/images/'.$shoe->image)); ?>" alt="image"
+                                                     data-src="<?php echo e(asset('storage/images/shoes/image1/'.$shoe->image)); ?>"
+                                                     src="<?php echo e(asset('storage/images/shoes/image1/'.$shoe->image)); ?>" alt="image"
                                                      title="product">
                                                 <!-- End hover image -->
                                                 <!-- product label -->
@@ -478,13 +478,13 @@
                                 <a href="<?php echo e(url("bag_detail/$bag->id")); ?>" class="grid-view-item__link">
                                     <!-- image -->
                                     <img class="grid-view-item__image primary blur-up lazyload"
-                                         data-src="<?php echo e(asset('image/bags/'.$bag->image)); ?>"
+                                         data-src="<?php echo e(asset('image/bags/image/'.$bag->image)); ?>"
                                          src="<?php echo e(asset('image/bags/'.$bag->image)); ?>" alt="image"
                                          title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
                                     <img class="grid-view-item__image hover blur-up lazyload"
-                                         data-src="<?php echo e(asset('image/bags/'.$bag->image)); ?>"
+                                         data-src="<?php echo e(asset('image/bags/image1/'.$bag->image)); ?>"
                                          src="<?php echo e(asset('image/bags/'.$bag->image)); ?>" alt="image"
                                          title="product">
                                     <!-- End hover image -->
@@ -552,11 +552,11 @@
                                 <!-- Variant -->
                                 <ul class="swatches text-center">
                                     <li class="swatch medium rounded"><img
-                                            src="<?php echo e(asset('image/bags/'.$bag->image)); ?>" alt="image"/></li>
+                                            src="<?php echo e(asset('image/bags/image/'.$bag->image)); ?>" alt="image"/></li>
                                     <li class="swatch medium rounded"><img
-                                            src="<?php echo e(asset('image/bags/'.$bag->image)); ?>" alt="image"/></li>
+                                            src="<?php echo e(asset('image/bags/image1/'.$bag->image)); ?>" alt="image"/></li>
                                     <li class="swatch medium rounded"><img
-                                            src="<?php echo e(asset('image/bags/'.$bag->image)); ?>" alt="image"/></li>
+                                            src="<?php echo e(asset('image/bags/image/'.$bag->image)); ?>" alt="image"/></li>
 
 
                                          

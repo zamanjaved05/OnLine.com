@@ -42,6 +42,10 @@
                         <label for="image">Select Avatar</label>
                         <input type="file" name="image" class="form-control" required>
                     </div>
+                    <div class="my-2">
+                        <label for="image1">Select Avatar1</label>
+                        <input type="file" name="image1" class="form-control" required>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

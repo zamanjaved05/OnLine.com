@@ -25,6 +25,7 @@ class ShoesController extends Controller
               <tr>
                 <th>ID</th>
                 <th>Image</th>
+                <th>Image1</th>
                 <th>Name</th>
                 <th>Price</th>
                 <th>Detail</th>
@@ -35,7 +36,8 @@ class ShoesController extends Controller
             foreach ($shoes as $shoe) {
                 $output .= '<tr>
                 <td>' . $shoe->id . '</td>
-                <td><img src="storage/images/' . $shoe->image . '" width="50" class="img-thumbnail rounded-circle"></td>
+                <td><img src="storage/images/shoes/image/' . $shoe->image . '" width="50" class="img-thumbnail rounded-circle"></td>
+                <td><img src="storage/images/shoes/image1/' . $shoe->image1 . '" width="50" class="img-thumbnail rounded-circle"></td>
                 <td>' . $shoe->name . ' ' . $shoe->price . '</td>
                 <td>' . $shoe->price . '</td>
                 <td>' . $shoe->detail . '</td>
@@ -57,9 +59,13 @@ class ShoesController extends Controller
     public function store(Request $request) {
         $file = $request->file('image');
         $fileName = time() . '.' . $file->getClientOriginalExtension();
-        $file->storeAs('public/images', $fileName);
+        $file->storeAs('public/images/shoes/image', $fileName);
 
-        $empData = ['name' => $request->name, 'price' => $request->price, 'detail' => $request->detail, 'image' => $fileName];
+        $file = $request->file('image1');
+        $fileName = time() . '.' . $file->getClientOriginalExtension();
+        $file->storeAs('public/images/shoes/image1', $fileName);
+
+        $empData = ['name' => $request->name, 'price' => $request->price, 'detail' => $request->detail, 'image' => $fileName, 'image1' => $fileName];
         Shoes::create($empData);
         return response()->json([
             'status' => 200,

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('shirts', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(50000);
             $table->string('name');
             $table->double('price');
             $table->text('description');

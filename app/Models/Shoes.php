@@ -13,5 +13,6 @@ class Shoes extends Model
         'price',
         'detail',
         'image',
+        'image1',
     ];
 }

@@ -25,6 +25,7 @@
         <tr>
             <th>No</th>
             <th>Image</th>
+            <th>Image1</th>
             <th>Name</th>
             <th>Details</th>
             <th width="280px">Action</th>
@@ -34,8 +35,9 @@
         @foreach ($products as $product)
 
             <tr>
-                <td></td>
+                <td>{{$product->id}}</td>
                 <td><img src="{{asset('image/products/'.$product->image)}}" width="100px"></td>
+                <td><img src="{{asset('image/products/image1/'.$product->image)}}" width="100px"></td>
                 <td>{{ $product->name }}</td>
                 <td>
                        <textarea name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>

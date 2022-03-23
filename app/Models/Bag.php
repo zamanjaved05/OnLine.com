@@ -12,6 +12,7 @@ class Bag extends Model
         'name',
         'price',
         'image',
+        'image1',
         'description',
     ];
 }
