@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('content'); ?>
 
     
@@ -64,17 +63,17 @@
                                 <?php if(File::exists(public_path("/image/products/".$item->attributes->image))): ?>
                                     <img src="<?php echo e(asset('image/products/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
-                                <?php elseif(File::exists(public_path("/image/products1/".$item->attributes->image))): ?>
-                                    <img src="<?php echo e(asset('image/products1/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                <?php elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image))): ?>
+                                    <img src="<?php echo e(asset('image/products1/image/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
                                 <?php elseif(File::exists(public_path("/image/cosmetic/".$item->attributes->image))): ?>
                                     <img src="<?php echo e(asset('image/cosmetic/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
-                                <?php elseif(File::exists(public_path("storage/images/".$item->attributes->image))): ?>
-                                    <img src="<?php echo e(asset('storage/images/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                <?php elseif(File::exists(public_path("/storage/images/shoes/image/".$item->attributes->image))): ?>
+                                    <img src="<?php echo e(asset('/storage/images/shoes/image/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
                                 <?php else: ?>
-                                    <img src="<?php echo e(asset('image/bags/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
+                                    <img src="<?php echo e(asset('image/bags/image/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
                                 <?php endif; ?>
 

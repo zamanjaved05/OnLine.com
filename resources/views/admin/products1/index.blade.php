@@ -25,6 +25,7 @@
         <tr>
             <th style="width:">No</th>
             <th>Image</th>
+            <th>Image1</th>
             <th>Name</th>
             <th width="">description</th>
             <th width="">Action</th>
@@ -35,7 +36,8 @@
 
             <tr>
                 <td>{{ ++$i }}</td>
-                <td><img src="/image/products1/{{ $product->image }}" width="100px"></td>
+                <td><img src="/image/products1/image/{{ $product->image }}" width="100px"></td>
+                <td><img src="/image/products1/image1//{{ $product->image }}" width="100px"></td>
                 <td>{{ $product->name }}</td>
                 <td>
                     <textarea name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>

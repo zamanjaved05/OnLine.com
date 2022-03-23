@@ -592,14 +592,14 @@
                                             <a href="{{url("products1_detail/$product->id") }}">
                                                 <!-- image -->
                                                 <img class="primary blur-up lazyload"
-                                                     data-src="{{asset('image/products1/'.$product->image)}}"
-                                                     src="{{asset('image/products1/'.$product->image)}}" alt="image"
+                                                     data-src="{{asset('image/products1/image/'.$product->image)}}"
+                                                     src="{{asset('image/products1/image/'.$product->image)}}" alt="image"
                                                      title="product">
                                                 <!-- End image -->
                                                 <!-- Hover image -->
                                                 <img class="hover blur-up lazyload"
-                                                     data-src="{{asset('image/products1/'.$product->image)}}"
-                                                     src="{{asset('image/products1/'.$product->image)}}"
+                                                     data-src="{{asset('image/products1/image1/'.$product->image)}}"
+                                                     src="{{asset('image/products1/image1/'.$product->image)}}"
                                                      alt="image" title="product">
                                                 <!-- End hover image -->
                                             </a>

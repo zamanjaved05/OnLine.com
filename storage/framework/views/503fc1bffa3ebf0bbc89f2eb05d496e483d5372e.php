@@ -467,8 +467,12 @@
                                            <img src="<?php echo e(('/image/cosmetic/'.$item->attributes->image)); ?>"
                                                 style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
 
-                                       <?php elseif(File::exists(public_path("/image/products1/".$item->attributes->image))): ?>
-                                           <img src="<?php echo e(('/image/products1/'.$item->attributes->image)); ?>"
+                                       <?php elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image))): ?>
+                                           <img src="<?php echo e(('/image/products1/image/'.$item->attributes->image)); ?>"
+                                                style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
+
+                                       <?php elseif(File::exists(public_path("/storage/images/shoes/image/".$item->attributes->image))): ?>
+                                           <img src="<?php echo e(('/storage/images/shoes/image/'.$item->attributes->image)); ?>"
                                                 style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
 
                                        <?php elseif(File::exists(public_path("storage/images/".$item->attributes->image))): ?>
@@ -476,7 +480,7 @@
                                                 style="width:120px" alt="3/4 Sleeve Kimono Dress" title=""/>
 
                                        <?php else: ?>
-                                           <img src="<?php echo e(('/image/bags/'.$item->attributes->image)); ?>"
+                                           <img src="<?php echo e(('/image/bags/image/'.$item->attributes->image)); ?>"
                                                 style="width:100px" alt="3/4 Sleeve Kimono Dress" title=""/>
 
                                        <?php endif; ?>
