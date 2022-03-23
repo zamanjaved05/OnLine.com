@@ -28,32 +28,32 @@
                             <div class="product-details-img">
                                 <div class="product-thumb">
                                     <div id="gallery" class="product-dec-slider-2 product-tab-left">
-                                        <a data-image="{{asset('image/products1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products1/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/products1/image/'.$product->image)}}" data-zoom-image="{{asset('image/products1/image/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/products1/image/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products1/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/products1/image1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/image1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/products1/image1/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products1/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/products1/image/'.$product->image)}}" data-zoom-image="{{asset('image/products1/image/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/products1/image/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products1/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/products1/image1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/image1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/products1/image1/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="0" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products1/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/products1/image/'.$product->image)}}" data-zoom-image="{{asset('image/products1/image/image'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/products1/image/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="1" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products1/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/products1/image1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/image1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/products1/image1/'.$product->image)}}" alt="" />
                                         </a>
-                                        <a data-image="{{asset('image/products1/'.$product->image)}}" data-zoom-image="{{asset('image/products1/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="2" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('image/products1/'.$product->image)}}" alt="" />
+                                        <a data-image="{{asset('image/products1/image/'.$product->image)}}" data-zoom-image="{{asset('image/products1/image/'.$product->image)}}" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="{{asset('image/products1/image/'.$product->image)}}" alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div class="zoompro-wrap product-zoom-right pl-20">
                                     <div class="zoompro-span">
-                                        <img class="zoompro blur-up lazyload" data-zoom-image="{{asset('image/products1/'.$product->image)}}" alt="" src="{{asset('image/products1/'.$product->image)}}" />
+                                        <img class="zoompro blur-up lazyload" data-zoom-image="{{asset('image/products1/image/'.$product->image)}}" alt="" src="{{asset('image/products1/image/'.$product->image)}}" />
                                     </div>
                                     <div class="product-labels"><span class="lbl on-sale">Sale</span><span class="lbl pr-label1">new</span></div>
                                     <div class="product-buttons">
