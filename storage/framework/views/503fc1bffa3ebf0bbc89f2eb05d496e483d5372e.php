@@ -164,8 +164,8 @@
                                            <img src="<?php echo e(('/image/products/'.$item->attributes->image)); ?>"
                                                 style="width:100px" alt="NoName image" title=""/>
 
-                                       <?php elseif(File::exists(public_path("/image/cosmetics/image/".$item->attributes->image))): ?>
-                                           <img src="<?php echo e(('/image/cosmetics/image/'.$item->attributes->image)); ?>"
+                                       <?php elseif(File::exists(public_path("/image/cosmatics/image/".$item->attributes->image))): ?>
+                                           <img src="<?php echo e(('/image/cosmatics/image/'.$item->attributes->image)); ?>"
                                                 style="width:100px" alt="NoName image" title=""/>
 
                                        <?php elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image))): ?>
@@ -782,7 +782,7 @@
                                         <div class="product-details-imgbag">
                                             <div class="mt-2" id="image">
                                             </div>
-                                           
+
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">

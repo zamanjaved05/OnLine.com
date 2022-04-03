@@ -1,8 +1,8 @@
 <?php $__env->startSection('content'); ?>
 
 
-    
- 
+
+
 
     <!--Home slider-->
     <div class="slideshow slideshow-wrapper pb-section sliderFull -mt-16">
@@ -115,8 +115,8 @@
                                                     </button>
                                                 </form>
 
-                                                
-                                                
+
+
                                                 <div class="button-set">
                                                     <a href="javascript:void(0)" onclick="modaldetail(<?php echo e($product->id); ?>)" title="Quick View"
                                                        class="quick-view-popup quick-view" data-toggle="modal"
@@ -173,7 +173,7 @@
                                                             src="<?php echo e(asset('image/products/'.$product->image)); ?>"
                                                             alt="image"/>
                                                     </li>
-                                                    
+
                                                 </ul>
                                                 <!-- End Variant -->
                                             </div>
@@ -300,7 +300,7 @@
                                             <!-- end product image -->
 
                                             <!-- Start product button -->
-                                           
+
                                                 <form class="variants add add-to-cart"
                                                       action="<?php echo e(route('cart.store')); ?>" method="POST"
                                                       enctype="multipart/form-data">
@@ -380,14 +380,14 @@
                 <a href="<?php echo e(url('allcosmetics')); ?>"><span style=";font-size: 15px;opacity: 70%">View All</span></a>
 
             <div class="collection-grid">
-                
-                
+
+
 
                 <?php $__currentLoopData = $cosmetics; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cosmetic): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                     <div class="collection-grid-item ">
                         <a href="<?php echo e(url("cosmetic_detail/$cosmetic->id")); ?>" class="collection-grid-item__link m-1">
-                            <img class="blur-up lazyload" data-src="<?php echo e(asset('image/cosmetics/image/'.$cosmetic->image)); ?>"
+                            <img class="blur-up lazyload" data-src="<?php echo e(asset('image/cosmatics/image/'.$cosmetic->image)); ?>"
                                  src="<?php echo e(asset('image/cosmetic/image/'.$cosmetic->image)); ?>" alt="Cosmetic"/>
                             <div class="collection-grid-item__title-wrapper">
 
@@ -418,7 +418,7 @@
 
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                
+
             </div>
         </div>
     </div>
@@ -559,7 +559,7 @@
                                             src="<?php echo e(asset('image/bags/image/'.$bag->image)); ?>" alt="image"/></li>
 
 
-                                         
+
 
 
                                 </ul>
@@ -568,7 +568,7 @@
                             </div>
                         </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    
+
                 </div>
             </div>
         </div>
@@ -672,8 +672,8 @@
     <!--End Store Feature-->
 
 
-    
-    
+
+
 <?php $__env->stopSection(); ?>
 
 

@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 
-    
+
     <style>
         .table>tbody>tr>td, .table>tfoot>tr>td{
             vertical-align: middle;
@@ -66,8 +66,8 @@
                                 <?php elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image))): ?>
                                     <img src="<?php echo e(asset('image/products1/image/'.$item->attributes->image)); ?>" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
-                                <?php elseif(File::exists(public_path("/image/cosmetics/image/".$item->attributes->image))): ?>
-                                    <img src="<?php echo e(asset('image/cosmetics/image/'.$item->attributes->image)); ?>" style="width:120px" alt="NoName image" title="" />
+                                <?php elseif(File::exists(public_path("/image/cosmatics/image/".$item->attributes->image))): ?>
+                                    <img src="<?php echo e(asset('image/cosmatics/image/'.$item->attributes->image)); ?>" style="width:120px" alt="NoName image" title="" />
 
                                 <?php elseif(File::exists(public_path("/storage/images/shoes/image/".$item->attributes->image))): ?>
                                     <img src="<?php echo e(asset('/storage/images/shoes/image/'.$item->attributes->image)); ?>" style="width:120px" alt="NoName image" title="" />

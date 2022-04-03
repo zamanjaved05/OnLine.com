@@ -164,8 +164,8 @@
                                            <img src="{{ ('/image/products/'.$item->attributes->image) }}"
                                                 style="width:100px" alt="NoName image" title=""/>
 
-                                       @elseif(File::exists(public_path("/image/cosmetics/image/".$item->attributes->image)))
-                                           <img src="{{ ('/image/cosmetics/image/'.$item->attributes->image) }}"
+                                       @elseif(File::exists(public_path("/image/cosmatics/image/".$item->attributes->image)))
+                                           <img src="{{ ('/image/cosmatics/image/'.$item->attributes->image) }}"
                                                 style="width:100px" alt="NoName image" title=""/>
 
                                        @elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image)))

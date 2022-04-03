@@ -67,8 +67,8 @@
                                 @elseif(File::exists(public_path("/image/products1/image/".$item->attributes->image)))
                                     <img src="{{asset('image/products1/image/'.$item->attributes->image)}}" style="width:120px" alt="3/4 Sleeve Kimono Dress" title="" />
 
-                                @elseif(File::exists(public_path("/image/cosmetics/image/".$item->attributes->image)))
-                                    <img src="{{asset('image/cosmetics/image/'.$item->attributes->image)}}" style="width:120px" alt="NoName image" title="" />
+                                @elseif(File::exists(public_path("/image/cosmatics/image/".$item->attributes->image)))
+                                    <img src="{{asset('image/cosmatics/image/'.$item->attributes->image)}}" style="width:120px" alt="NoName image" title="" />
 
                                 @elseif(File::exists(public_path("/storage/images/shoes/image/".$item->attributes->image)))
                                     <img src="{{asset('/storage/images/shoes/image/'.$item->attributes->image)}}" style="width:120px" alt="NoName image" title="" />

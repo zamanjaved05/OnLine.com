@@ -711,7 +711,7 @@
 
                     <div class="collection-grid-item ">
                         <a href="{{url("cosmetic_detail/$cosmetic->id") }}" class="collection-grid-item__link m-1">
-                            <img class="blur-up lazyload" data-src="{{asset('image/cosmetics/image/'.$cosmetic->image)}}"
+                            <img class="blur-up lazyload" data-src="{{asset('image/cosmatics/image/'.$cosmetic->image)}}"
                                  src="{{asset('image/cosmetic/image/'.$cosmetic->image)}}" alt="Cosmetic"/>
                             <div class="collection-grid-item__title-wrapper">
 

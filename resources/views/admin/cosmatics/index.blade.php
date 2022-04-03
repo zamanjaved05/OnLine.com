@@ -35,11 +35,11 @@
 
             <tr>
                 <td>{{ ++$i }}</td>
-                <td><img src="{{asset('image/cosmetic/image/'.$cosmetic->image)}}" width="100px"></td>
-                <td><img src="{{asset('image/cosmetic/image1/'.$cosmetic->image)}}" width="100px"></td>
+                <td><img src="{{asset('image/cosmetics/image/'.$cosmetic->image)}}" width="100px"></td>
+                <td><img src="{{asset('image/cosmetics/image1/'.$cosmetic->image)}}" width="100px"></td>
                 <td>{{ $cosmetic->name }}</td>
                 <td>
-       <textarea name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>
+       <textarea name="text">
            {{ $cosmetic->description }}</textarea>
            </td>
                 <td>
@@ -51,7 +51,7 @@
 
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Save</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>
             </tr>
