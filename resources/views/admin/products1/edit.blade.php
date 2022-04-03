@@ -50,7 +50,12 @@
                 <div class="form-group">
                     <strong>Image:</strong>
                     <input type="file" name="image" class="form-control" placeholder="image">
-                    <img src="/image/products1/{{ $product1->image }}" width="300px">
+                    <img src="{{asset('image/products1/image/'.$product1->image)}}" width="100px">
+                </div>
+                <div class="form-group">
+                    <strong>Image1:</strong>
+                    <input type="file" name="image1" class="form-control" placeholder="image">
+                    <img src="{{asset('image/products1/image1/'.$product1->image)}}" width="100px">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

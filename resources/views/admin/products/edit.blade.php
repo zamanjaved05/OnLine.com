@@ -44,20 +44,25 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>price:</strong>
-                    <input type="text   " name="price" class="form-control" placeholder="image">
+                    <input type="text" name="price" class="form-control" placeholder="image" value="{{ $product->price }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Detail:</strong>
-                    <textarea class="form-control" style="height:150px" name="description" placeholder="description">{{ $product->detail }}</textarea>
+                    <textarea class="form-control" style="height:150px" name="description" placeholder="description">{{ $product->description }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Image:</strong>
                     <input type="file" name="image" class="form-control" placeholder="image">
-                    <img src="/image/{{ $product->image }}" width="300px">
+                    <img src="{{asset('image/products/'.$product->image)}}" width="100px">
+                </div>
+                <div class="form-group">
+                    <strong>Image1:</strong>
+                    <input type="file" name="image1" class="form-control" placeholder="image">
+                    <img src="{{asset('image/products/image1/'.$product->image)}}" width="100px">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

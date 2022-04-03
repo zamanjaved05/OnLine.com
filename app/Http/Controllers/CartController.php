@@ -17,7 +17,8 @@ class CartController extends Controller
 
     public function layout()
     {
-        return view('layout.layout');
+        $cartItems = \Cart::getContent();
+        return view('layout.layout',compact('cartItems'));
     }
     public function productList()
     {

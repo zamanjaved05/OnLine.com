@@ -595,7 +595,7 @@
     'from' => 
     array (
       'address' => 'hello@example.com',
-      'name' => 'Example',
+      'name' => 'NoName',
     ),
     'markdown' => 
     array (

@@ -86,15 +86,25 @@ class ShoesController extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $fileName = time() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/images', $fileName);
+            $file->storeAs('public/images/shoes/image', $fileName);
             if ($emp->image) {
-                Storage::delete('public/images/' . $emp->image);
+                Storage::delete('public/images/shoes/image' . $emp->image);
             }
         } else {
             $fileName = $request->image;
         }
+        if ($request->hasFile('image1')) {
+            $file = $request->file('image1');
+            $fileName1 = time() . '.' . $file->getClientOriginalExtension();
+            $file->storeAs('public/images/shoes/image1', $fileName1);
+            if ($emp->image1) {
+                Storage::delete('public/images/shoes/image1/' . $emp->image1);
+            }
+        } else {
+            $fileName1 = $request->image1;
+        }
 
-        $empData = ['name' => $request->name, 'price' => $request->price, 'detail' => $request->detail, 'image' => $fileName];
+        $empData = ['name' => $request->name, 'price' => $request->price, 'detail' => $request->detail, 'image' => $fileName, 'image1' => $fileName1];
 
         $emp->update($empData);
         return response()->json([

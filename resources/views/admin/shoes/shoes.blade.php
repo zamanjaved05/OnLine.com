@@ -92,6 +92,13 @@
                     <div class="mt-2" id="image">
 
                     </div>
+                    <div class="my-2">
+                        <label for="image1">Image1 </label>
+                        <input type="file" name="image1" class="form-control">
+                    </div>
+                    <div class="mt-2" id="image1">
+
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -173,7 +180,9 @@
                     $("#price").val(response.price);
                     $("#detail").val(response.detail);
                     $("#image").html(
-                        `<img src="storage/images/${response.image}" width="100" class="img-fluid img-thumbnail">`);
+                        `<img src="storage/images/shoes/image/${response.image}" width="50" class="img-fluid img-thumbnail">`);
+                    $("#image1").html(
+                        `<img src="storage/images/shoes/image1/${response.image1}" width="50" class="img-fluid img-thumbnail">`);
                     $("#emp_id").val(response.id);
                     $("#emp_avatar").val(response.image);
                 }

@@ -113,12 +113,21 @@ class CosmeticController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/cosmetic';
+            $destinationPath = 'image/cosmetic/image';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
         }else{
             unset($input['image']);
+        }
+
+        if ($image = $request->file('image1')) {
+            $destinationPath = 'image/cosmetic/image1';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image1'] = "$profileImage";
+        }else{
+            unset($input['image1']);
         }
 
         $cosmetic->update($input);

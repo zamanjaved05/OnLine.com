@@ -98,7 +98,7 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: #191919;border-radius: 15px">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link pt-2.5" style="">
             <img src="{{asset('logo/noname.png')}}" alt="AdminLTE Logo"

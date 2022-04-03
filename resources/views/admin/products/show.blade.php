@@ -24,17 +24,25 @@
                             <strong>Name:</strong>
                             {{ $product->name }}
                         </div>
+                        <div class="form-group">
+                            <strong>Price:</strong>
+                            {{ $product->price }}
+                        </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Details:</strong>
-                            {{ $product->detail }}
+                            {{ $product->description }}
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Image:</strong>
-                            <img src="/image/{{ $product->image }}" width="500px">
+                            <img src="{{asset('image/products/'.$product->image)}}" width="300px">
+                        </div>
+                        <div class="form-group">
+                            <strong>Image1:</strong>
+                            <img src="{{asset('image/products/image1/'.$product->image)}}" width="300px">
                         </div>
                     </div>
                 </div>

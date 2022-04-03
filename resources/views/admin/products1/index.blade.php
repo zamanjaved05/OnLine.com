@@ -36,8 +36,8 @@
 
             <tr>
                 <td>{{ ++$i }}</td>
-                <td><img src="/image/products1/image/{{ $product->image }}" width="100px"></td>
-                <td><img src="/image/products1/image1//{{ $product->image }}" width="100px"></td>
+                <td><img src="{{asset('image/products1/image/'.$product->image)}}" width="100px"></td>
+                <td><img src="{{asset('image/products1/image1/'.$product->image)}}" width="100px"></td>
                 <td>{{ $product->name }}</td>
                 <td>
                     <textarea name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'>
